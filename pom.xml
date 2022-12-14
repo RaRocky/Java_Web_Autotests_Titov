@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- версия модели для POM-ов Maven 2.x всегда 4.0.0 -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- координаты проекта, то есть набор значений, который позволяет однозначно идентифицировать этот проект -->
+  <!-- перевёрнутый адрес сайта компании разработчика -->
+  <groupId>org.example</groupId>
+  <!-- Название проекта -->
+  <artifactId>Java_Web_Autotests_Titov</artifactId>
+  <!-- Версия проекта -->
+  <version>1.0-SNAPSHOT</version>
+  <!-- вид, в который соберётся проект. Это может быть jar, war и другие. В этом случае устанавливается флаг pom для
+  сборки maven-проекта. последний используется как дополнительный модуль в других приложениях -->
+  <packaging>pom</packaging>
+
+  <name>Java_Web_Autotests_Titov</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <!-- версии подключенных библиотек -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- версия сборщика Maven -->
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <!-- версия JUnit -->
+    <junit.jupiter.version>5.9.1</junit.jupiter.version>
+  </properties>
+
+  <dependencies>
+
+    <!--Junit-jupiter_Library-->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+
+  </build>
+
+  <reports/>
+</project>

@@ -13,8 +13,8 @@ import java.time.Duration;
 // Класс объекта с функционалом тест-кейса №1. Клик по главному логотипу сайта.
 public class PressLogoTestCase extends AbstractTestCase {
 
-    // Объект главного логотипа сайта.
-    Logo logo = new Logo(getBrowser());
+    /*// Объект главного логотипа сайта.
+    Logo logo = new Logo(getBrowser());*/
 
 
     // Конструктор.
@@ -40,7 +40,7 @@ public class PressLogoTestCase extends AbstractTestCase {
     // Шаг №1. Клик по главному логотипу сайта.
     @Override
     public void step1() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        logo.clickLogo();
+        getLogo().clickLogo();
     }
 
     // Ожидание выполнения Шага №1.

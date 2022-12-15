@@ -1,5 +1,6 @@
 package org.example.servises.abstractions;
 
+import org.example.demoblase_com.pages.Logo;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
@@ -7,18 +8,24 @@ import org.example.servises.webdriver.Browser;
 // Класс абстрактного тест кейса. Содержит общие методы для всех тест кейсов.
 public class AbstractTestCase {
 
-    // Объект класса Browser для управления браузером при помощи Selenium Web Driver.
-    private final Browser browser;
     // Время явного ожидания выполнения предусловия или шага в секундах.
     private final int EXPLICIT_WAIT_TIME = 5;
+
+    // Объект класса Browser для управления браузером при помощи Selenium Web Driver.
+    private final Browser browser;
+
+    // Объект главного логотипа сайта.
+    Logo logo;
 
 
     // Конструктор.
     public AbstractTestCase(Browser browser) {
         this.browser = browser;
+        setLogo(browser);
     }
 
 
+    // Геттеры.
     // Геттер объекта класса Browser.
     public Browser getBrowser() {
         return browser;
@@ -27,6 +34,18 @@ public class AbstractTestCase {
     public int getEXPLICIT_WAIT_TIME() {
         return EXPLICIT_WAIT_TIME;
     }
+    // Геттер объекта главного логотипа сайта.
+    public Logo getLogo () {
+        return logo;
+    }
+
+
+    // Сеттеры.
+    // Сеттер главного логотипа сайта.
+    public void setLogo (Browser browser) {
+        this.logo = new Logo(browser);
+    }
+
 
     // Метод, выполняющий все шаги тест-кейса.
     public void doTestCase(int explicitWaitTime) throws WrongTypeOfLocatorException, WrongPathOfLocatorException {

@@ -23,13 +23,13 @@ public class HomeWork3 {
         pressLogoTestCase(browser);
 
         // Выполнение тест-кейса №2. Авторизация пользователя.
-        authorizationTestCase(browser);
+        //authorizationTestCase(browser);
         // Запись в файл cookie с авторизованным пользователем
-        MyCookie cookie = new MyCookie(browser);
-        cookie.writeCookieToFile("./src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data");
+        /*MyCookie cookie = new MyCookie(browser);
+        cookie.writeCookieToFile("./src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data");*/
 
         // Выполнение тест-кейса №3. Добавление товара 'ASUS Full HD' в корзину с последующим удалением.
-        addProductOnCartAndDeleteTestCase(browser);
+        //addProductOnCartAndDeleteTestCase(browser);
 
         // Остановка работы Selenium Web Driver. Закрытие браузера.
         browser.close();

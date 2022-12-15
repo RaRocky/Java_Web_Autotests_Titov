@@ -24,12 +24,10 @@ import org.openqa.selenium.support.PageFactory;
 public class AbstractPage {
 
     // Время паузы между действиями в миллмсекундах.
-    private final long PAUSE = 500;
+    private final long PAUSE = 3000;
 
     // Объект класса WebDriver.
     private final WebDriver webDriver;
-
-
 
 
     // Конструктор.
@@ -110,6 +108,7 @@ public class AbstractPage {
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         pause();
         if (checkLocator(locator)) webElement.click();
+        pause();
     }
 
     // Ввод текста в поле ввода.
@@ -117,6 +116,7 @@ public class AbstractPage {
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         pause();
         if (checkLocator(locator)) webElement.sendKeys(text);
+        pause();
     }
 
 

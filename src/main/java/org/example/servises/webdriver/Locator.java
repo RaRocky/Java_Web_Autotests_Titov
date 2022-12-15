@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 // Класс описывает основные характеристики веб-элемента, необходимые для взаимодействия с ним.
 public class Locator {
 
-    private WebElement webElement;
-
     private final String name;  // Имя веб-элемента.
     private final String type;  // Тип локатора для поиска веб-элемента. ("id", "css", "xpath").
     private final String path;  // Локатор веб-элемента.

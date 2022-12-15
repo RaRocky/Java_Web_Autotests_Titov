@@ -4,22 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 3. Промежуточный коммит.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/AsusFullHdMonitorPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="master" />
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -36,23 +52,60 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Libraries",
+    "last_directory_selection": "C:/Users/Admin/IdeaProjects/Java_Web_Autotests_Titov/src/main/java/org/example",
+    "last_opened_file_path": "C:/Users/Admin/IdeaProjects/Java_Web_Autotests_Titov/src/main/java/org/example/servises/webdriver",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example.servises.abstractions" />
+      <recent name="org.example.lesson3" />
+      <recent name="org.example.servises.webdriver" />
+      <recent name="org.example.web_driver" />
+      <recent name="org.example.demo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.org.example.lesson3.HomeWork3">
+    <configuration name="DemoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.demo.DemoApp" />
       <module name="Java_Web_Autotests_Titov" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.demo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.example.lesson3.HomeWork3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.lesson3.HomeWork3" />
+      <module name="Java_Web_Autotests_Titov" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.lesson3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java_Web_Autotests_Titov" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.demo" />
+      <option name="MAIN_CLASS_NAME" value="org.example.demo.DemoAppTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -60,7 +113,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="Application.org.example.lesson3.HomeWork3" />
+        <item itemvalue="Application.DemoApp" />
+        <item itemvalue="JUnit.DemoAppTest" />
       </list>
     </recent_temporary>
   </component>
@@ -73,6 +128,147 @@
       <option name="presentableId" value="Default" />
       <updated>1671024412000</updated>
     </task>
+    <task id="LOCAL-00001" summary="Создание проекта Maven.&#10;Внесение изменений в POM.xml.&#10;Внесение изменений в классы App  и AppTest с целью создания демо-теста.">
+      <created>1671036635809</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671036635809</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1. Подключение библиотеки Selenium-java_4.7.1 (рекомендуемая последняя).&#10;2. Подключение библиотеки WebDriverManager_5.3.1 (рекомендуемая последняя).">
+      <created>1671038668223</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671038668223</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Создан класс AbstractPage.">
+      <created>1671069428357</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069428357</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Создан класс AbstractTestCase.">
+      <created>1671069454295</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069454295</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Создан класс Browser.">
+      <created>1671069507388</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069507388</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Создан класс AuthorizationForm.">
+      <created>1671069539519</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069539519</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Создан Enum BrowserName.">
+      <created>1671069578264</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069578264</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Класс App переименован в DemoApp.">
+      <created>1671069628970</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069628970</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Класс AppTest переименован в DemoAppTest.">
+      <created>1671069661169</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069661169</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Создан класс HomeWork3.">
+      <created>1671069698420</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069698420</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Создан класс Locator.">
+      <created>1671069718676</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069718676</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Создан класс Logo.">
+      <created>1671069737964</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069737964</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Редакция pom.xml">
+      <created>1671069772185</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069772185</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Создан класс PressLogoTestCase">
+      <created>1671069804568</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069804568</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Создан Exception WrongPathOfLocatorException.">
+      <created>1671069848288</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069848288</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Создан Exception WrongTypeOfLocatorException.">
+      <created>1671069863640</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069863640</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Изменения в служебных файлах.">
+      <created>1671069895598</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1671069895598</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Home Work 3. Добавлен метод, реализующий тест-кейс №2. Авторизация пользователя.">
+      <created>1671080639867</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1671080639867</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Home Work 3. Начало разработки метода добавления товара. Вопрос с куки.">
+      <created>1671125074960</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1671125074960</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Home Work 3. Промежуточный коммит.">
+      <created>1671133527967</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1671133527967</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -80,10 +276,65 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/temp" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Создание проекта Maven.&#10;Внесение изменений в POM.xml.&#10;Внесение изменений в классы App  и AppTest с целью создания демо-теста." />
+    <MESSAGE value="1. Подключение библиотеки Selenium-java_4.7.1 (рекомендуемая последняя).&#10;2. Подключение библиотеки WebDriverManager_5.3.1 (рекомендуемая последняя)." />
+    <MESSAGE value="Создан класс AbstractPage." />
+    <MESSAGE value="Создан класс AbstractTestCase." />
+    <MESSAGE value="Создан класс Browser." />
+    <MESSAGE value="Создан класс AuthorizationForm." />
+    <MESSAGE value="Создан Enum BrowserName." />
+    <MESSAGE value="Класс App переименован в DemoApp." />
+    <MESSAGE value="Класс AppTest переименован в DemoAppTest." />
+    <MESSAGE value="Создан класс HomeWork3." />
+    <MESSAGE value="Создан класс Locator." />
+    <MESSAGE value="Создан класс Logo." />
+    <MESSAGE value="Редакция pom.xml" />
+    <MESSAGE value="Создан класс PressLogoTestCase" />
+    <MESSAGE value="Создан Exception WrongPathOfLocatorException." />
+    <MESSAGE value="Создан Exception WrongTypeOfLocatorException." />
+    <MESSAGE value="Изменения в служебных файлах." />
+    <MESSAGE value="Home Work 3. Добавлен метод, реализующий тест-кейс №2. Авторизация пользователя." />
+    <MESSAGE value="Home Work 3. Начало разработки метода добавления товара. Вопрос с куки." />
+    <MESSAGE value="Home Work 3. Промежуточный коммит." />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Work 3. Промежуточный коммит." />
   </component>
 </project>

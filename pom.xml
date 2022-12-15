@@ -26,11 +26,30 @@
     <!-- версия сборщика Maven -->
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
+    <!-- версия Selenium-java -->
+    <selenium-java.version>4.7.1</selenium-java.version>
+    <!-- версия Web Driver Manager -->
+    <webdrivermanager.version>5.3.1</webdrivermanager.version>
     <!-- версия JUnit -->
     <junit.jupiter.version>5.9.1</junit.jupiter.version>
   </properties>
 
   <dependencies>
+
+    <!-- Selenium-java_Library -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>${selenium-java.version}</version>
+    </dependency>
+
+    <!-- Web Driver Manager_Library -->
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>${webdrivermanager.version}</version>
+      <scope>compile</scope>
+    </dependency>
 
     <!--Junit-jupiter_Library-->
     <dependency>
@@ -51,11 +70,23 @@
       <version>${junit.jupiter.version}</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.2.6</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
 
   </build>
 
-  <reports/>
 </project>

@@ -1,11 +1,13 @@
 package org.example.demoblase_com.testcases;
 
+import org.example.demoblase_com.pages.CategoriesMenu;
+import org.example.demoblase_com.pages.ProductsBlock;
 import org.example.servises.abstractions.AbstractTestCase;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
-import org.example.servises.webdriver.BrowserName;
 import org.example.servises.webdriver.cookie.MyCookie;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -13,6 +15,11 @@ import java.time.Duration;
 
 // Класс объекта с функционалом тест-кейса №3. Добавление товара 'ASUS Full HD' в корзину с последующим удалением.
 public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
+
+    // Объект меню категорий товаров.
+    CategoriesMenu categoriesMenu = new CategoriesMenu(getBrowser());
+    // Объект блока товаров.
+    ProductsBlock productsBlock = new ProductsBlock(getBrowser());
 
 
     // Конструктор.
@@ -38,38 +45,44 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
     // Предусловие №2. Добавление cookie с авторизованным пользователем.
     @Override
     public void precondition2() {
-        /*MyCookie cookie = new MyCookie(BrowserName.CHROME);
-        cookie.addCookiesFromFile("./main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data");*/
+        MyCookie cookie = new MyCookie(getBrowser());
+        cookie.addCookiesFromFile("./src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data");
+        getBrowser().getWebDriver().navigate().refresh();
     }
 
     // Ожидание выполнения предусловия №2.
     @Override
     public void waitOfPrecondition2(int explicitWaitTime) {
-
+        new WebDriverWait(getBrowser().getWebDriver(), Duration.ofSeconds(explicitWaitTime)).until(ExpectedConditions
+                .visibilityOfElementLocated(By.id("nameofuser")));
     }
 
     // Шаг№1. Переход на страницу категории 'Monitors'.
     @Override
     public void step1() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        super.step1();
+        categoriesMenu.clickMonitors();
     }
 
     // Ожидание выполнения шага №1.
     @Override
     public void waitOfStep1(int explicitWaitTime) {
-
+        new WebDriverWait(getBrowser().getWebDriver(),
+                Duration.ofSeconds(explicitWaitTime)).until(ExpectedConditions.urlContains(
+                "https://www.demoblaze.com/index.html#"));
     }
 
     // Шаг№2. Переход на страницу товара 'ASUS Full HD'.
     @Override
     public void step2() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        super.step2();
+        productsBlock.clickAsusFullHd();
     }
 
     // Ожидание выполнения шага №2.
     @Override
     public void waitOfStep2(int explicitWaitTime) {
-
+        new WebDriverWait(getBrowser().getWebDriver(),
+                Duration.ofSeconds(explicitWaitTime)).until(ExpectedConditions.urlContains(
+                "https://www.demoblaze.com/prod.html?idp_=14"));
     }
 
     // Шаг№3. Нажатие на кнопку 'Add to cart'.

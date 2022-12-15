@@ -1,26 +1,32 @@
 package org.example.servises.webdriver.cookie;
 
 import org.example.servises.webdriver.Browser;
-import org.example.servises.webdriver.BrowserName;
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.WebDriver;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
 // Класс, реализующий функционал работы с cookie.
-public class MyCookie extends Browser {
+public class MyCookie {
+
+    // Объект класса Web Driver.
+    private final WebDriver webDriver;
+
 
     // Конструктор.
-    public MyCookie(BrowserName browser) {
-        super(browser);
+    public MyCookie(Browser browser) {
+        this.webDriver = browser.getWebDriver();
     }
 
 
     // Метод, осуществляющий запись текущих cookie браузера в файл.
-    public void writeCookieToFile(String fileName) {
+    public void writeCookieToFile(String fileName) throws IOException {
 
         // Создание файла для записи значений Cookie.
         File file = new File(fileName);
+
+        if (!file.exists()) file.createNewFile();
 
         try {
             // Объект, осуществляющий запись данных в файл.
@@ -29,7 +35,7 @@ public class MyCookie extends Browser {
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             // Запись значений Cookie в файл.
-            for (Cookie ck : getWebDriver().manage().getCookies()) {
+            for (Cookie ck : webDriver.manage().getCookies()) {
                 bufferedWriter.write((ck.getName() + ";" + ck.getValue() + ";" + ck.getDomain() + ";" + ck.getPath() +
                         ";" + ck.getExpiry() + ";" + ck.isSecure()));
                 bufferedWriter.newLine();
@@ -110,7 +116,7 @@ public class MyCookie extends Browser {
                             .build();
 
                     // добавление cookie в текущую сессию браузера.
-                    getWebDriver().manage().addCookie(cookie);
+                    webDriver.manage().addCookie(cookie);
                 }
             }
             fileReader.close();

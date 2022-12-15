@@ -19,8 +19,8 @@ public class AuthorizationTestCase extends AbstractTestCase {
     private final MainMenu mainMenu = new MainMenu(getBrowser());
     // Объект формы авторизации пользователя.
     private final AuthorizationForm authorizationForm = new AuthorizationForm(getBrowser());
-    // Пауза ожидания между действиями в миллисекундах
-    private final long PAUSE = 500;
+    /*// Пауза ожидания между действиями в миллисекундах
+    private final long PAUSE = 500;*/
 
 
     // Конструктор.
@@ -59,26 +59,25 @@ public class AuthorizationTestCase extends AbstractTestCase {
     // Шаг №2. Клик по полю ввода имени пользователя.
     @Override
     public void step2() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        authorizationForm.clickUserNameField().pause(PAUSE);
+        authorizationForm.clickUserNameField();
     }
 
     // Шаг №3. Ввод имени пользователя.
     @Override
     public void step3() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        authorizationForm.enterUserName("Bob Smith").pause(PAUSE);
-
+        authorizationForm.enterUserName("Bob Smith");
     }
 
     // Шаг №4. Клик по полю ввода пароля.
     @Override
     public void step4() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        authorizationForm.clickPasswordField().pause(PAUSE);
+        authorizationForm.clickPasswordField();
     }
 
     // Шаг №5. Ввод пароля.
     @Override
     public void step5() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        authorizationForm.enterPassword("Enter000").pause(PAUSE);
+        authorizationForm.enterPassword("Enter000");
     }
 
     // Шаг №6. Клик по кнопке 'Log in' в форме авторизации пользователя.

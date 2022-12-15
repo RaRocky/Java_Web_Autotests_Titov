@@ -9,11 +9,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+/*// Шаблон.
+// Локатор.
+private final String = ;
+// Поиск при помощи паттерна PageFactory.
+@FindBy()
+WebElement ;
+// Характеристики локатора.
+Locator  = new Locator(, ,);*/
+
 
 // Класс абстрактной страницы сайта. Содержит основные методы взаимодействия с веб-элементами сайта.
 public class AbstractPage {
 
-    private final WebDriver webDriver;  // Объект класса WebDriver.
+    // Время паузы между действиями в миллмсекундах.
+    private final long PAUSE = 5000;
+
+    // Объект класса WebDriver.
+    private final WebDriver webDriver;
 
 
     // Конструктор.
@@ -27,7 +40,6 @@ public class AbstractPage {
     public WebDriver getWebDriver() {
         return this.webDriver;
     }
-
 
 
     // Проверка локатора на наличе в DOM-структуре и уникальность.
@@ -81,13 +93,28 @@ public class AbstractPage {
         }
     }
 
+    // Пауза.
+    public void pause() {
+        try {
+            Thread.sleep(PAUSE);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     // Клик по веб-элементу.
-    public void clickElement(WebElement webElement) {
-        webElement.click();
+    public void clickElement(WebElement webElement, Locator locator)
+            throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        if (checkLocator(locator)) webElement.click();
+        pause();
     }
 
     // Ввод текста в поле ввода.
-    public void enterText(WebElement webElement, String text) {
-        webElement.sendKeys(text);
+    public void enterText(WebElement webElement, Locator locator, String text)
+            throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        if (checkLocator(locator)) webElement.sendKeys(text);
+        pause();
     }
+
+
 }

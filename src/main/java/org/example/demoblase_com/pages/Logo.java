@@ -4,9 +4,7 @@ import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.abstractions.AbstractPage;
 import org.example.servises.webdriver.Browser;
-import org.example.servises.webdriver.BrowserName;
 import org.example.servises.webdriver.Locator;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -16,11 +14,9 @@ public class Logo extends AbstractPage {
     // Главный логотип сайта.
     // Локатор главного логотипа сайта.
     private final String LOGO_LOCATOR = "nava";
-
     // Поиск главного логотипа сайта при помощи паттерна PageFactory.
     @FindBy(id = LOGO_LOCATOR)
     WebElement logo;
-
     // Характеристики главного логотипа сайта.
     Locator logoLocator = new Locator("Главный логотип сайта", "id", LOGO_LOCATOR);
 
@@ -33,6 +29,6 @@ public class Logo extends AbstractPage {
 
     // Клик по главному логотипу сайта.
     public void clickLogo() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        if (checkLocator(logoLocator)) clickElement(logo);
+        clickElement(logo, logoLocator);
     }
 }

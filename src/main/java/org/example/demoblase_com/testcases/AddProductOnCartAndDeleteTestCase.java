@@ -1,6 +1,5 @@
 package org.example.demoblase_com.testcases;
 
-import org.example.demoblase_com.pages.*;
 import org.example.servises.abstractions.AbstractTestCase;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
@@ -14,19 +13,6 @@ import java.time.Duration;
 
 // Класс объекта с функционалом тест-кейса №3. Добавление товара 'ASUS Full HD' в корзину с последующим удалением.
 public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
-
-    // Объект меню категорий товаров.
-    private final CategoriesMenu categoriesMenu = new CategoriesMenu(getBrowser());
-    // Объект блока товаров.
-    private final ProductsBlock productsBlock = new ProductsBlock(getBrowser());
-    // Объект страницы товара 'ASUS Full HD'.
-    private final AsusFullHdMonitorPage asusFullHdMonitorPage = new AsusFullHdMonitorPage(getBrowser());
-    // объект главного меню сайта.
-    private final MainMenu mainMenu = new MainMenu(getBrowser());
-
-    // Объект страницы корзины товаров.
-    private final CartPage cartPage = new CartPage(getBrowser());
-
 
     // Конструктор.
     public AddProductOnCartAndDeleteTestCase(Browser browser) {
@@ -66,7 +52,7 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
     // Шаг№1. Переход на страницу категории 'Monitors'.
     @Override
     public void step1() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        categoriesMenu.clickMonitors();
+        getCategoriesMenu().clickMonitors();
     }
 
     // Ожидание выполнения шага №1.
@@ -80,7 +66,7 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
     // Шаг№2. Переход на страницу товара 'ASUS Full HD'.
     @Override
     public void step2() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        productsBlock.clickAsusFullHd();
+        getProductsBlock().clickAsusFullHd();
     }
 
     // Ожидание выполнения шага №2.
@@ -94,13 +80,13 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
     // Шаг№3. Нажатие на кнопку 'Add to cart'.
     @Override
     public void step3() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        asusFullHdMonitorPage.clickAddToCartButton();
+        getAsusFullHdMonitorPage().clickAddToCartButton();
     }
 
     // Ожидание выполнения шага №3.
     @Override
     public void waitOfStep3(int explicitWaitTime) {
-        new WebDriverWait(productsBlock.getWebDriver(),
+        new WebDriverWait(getProductsBlock().getWebDriver(),
                 Duration.ofSeconds(explicitWaitTime)).until(ExpectedConditions.alertIsPresent());
     }
 
@@ -119,7 +105,7 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
     // Шаг№5. Переход в раздел 'Cart' главного меню сайта.
     @Override
     public void step5() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-       mainMenu.clickCart();
+       getMainMenu().clickCart();
     }
 
     // Ожидание выполнения шага №5.
@@ -134,13 +120,13 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
     // Шаг №6. Нажатие на кнопку Delete. Удаление товара из корзины.
     @Override
     public void step6() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        cartPage.clickDelete();
+        getCartPage().clickDelete();
     }
 
     // Ожидание выполнения шага №6.
     @Override
     public void waitOfStep6(int explicitWaitTime) {
-        cartPage.pause();
-        cartPage.pause();
+        getCartPage().pause();
+        getCartPage().pause();
     }
 }

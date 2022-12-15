@@ -1,6 +1,5 @@
 package org.example.servises.abstractions;
 
-import org.example.demoblase_com.pages.AsusFullHdMonitorPage;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
@@ -24,7 +23,7 @@ import org.openqa.selenium.support.PageFactory;
 public class AbstractPage {
 
     // Время паузы между действиями в миллмсекундах.
-    private final long PAUSE = 3000;
+    private final long PAUSE = 500;
 
     // Объект класса WebDriver.
     private final WebDriver webDriver;

@@ -1,6 +1,5 @@
 package org.example.demoblase_com.testcases;
 
-import org.example.demoblase_com.pages.Logo;
 import org.example.servises.abstractions.AbstractTestCase;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
@@ -12,10 +11,6 @@ import java.time.Duration;
 
 // Класс объекта с функционалом тест-кейса №1. Клик по главному логотипу сайта.
 public class PressLogoTestCase extends AbstractTestCase {
-
-    /*// Объект главного логотипа сайта.
-    Logo logo = new Logo(getBrowser());*/
-
 
     // Конструктор.
     public PressLogoTestCase(Browser browser) {

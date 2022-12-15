@@ -1,5 +1,6 @@
 package org.example.servises.abstractions;
 
+import org.example.demoblase_com.pages.AsusFullHdMonitorPage;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
@@ -9,24 +10,26 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-/*// Шаблон.
-// Локатор.
-private final String = ;
-// Поиск при помощи паттерна PageFactory.
-@FindBy()
-WebElement ;
-// Характеристики локатора.
-Locator  = new Locator(, ,);*/
+    /*// Шаблон.
+    // Локатор.
+    private final String = _LOCATOR;
+    // Поиск при помощи паттерна PageFactory.
+    @FindBy()
+    WebElement ;
+    // Характеристики локатора.
+    Locator  = new Locator(, ,);*/
 
 
 // Класс абстрактной страницы сайта. Содержит основные методы взаимодействия с веб-элементами сайта.
 public class AbstractPage {
 
     // Время паузы между действиями в миллмсекундах.
-    private final long PAUSE = 5000;
+    private final long PAUSE = 500;
 
     // Объект класса WebDriver.
     private final WebDriver webDriver;
+
+
 
 
     // Конструктор.
@@ -105,15 +108,15 @@ public class AbstractPage {
     // Клик по веб-элементу.
     public void clickElement(WebElement webElement, Locator locator)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        if (checkLocator(locator)) webElement.click();
         pause();
+        if (checkLocator(locator)) webElement.click();
     }
 
     // Ввод текста в поле ввода.
     public void enterText(WebElement webElement, Locator locator, String text)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        if (checkLocator(locator)) webElement.sendKeys(text);
         pause();
+        if (checkLocator(locator)) webElement.sendKeys(text);
     }
 
 

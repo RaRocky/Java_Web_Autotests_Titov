@@ -11,7 +11,16 @@ import org.openqa.selenium.support.FindBy;
 // Класс главного меню сайта.
 public class MainMenu extends AbstractPage {
 
-    // Кнопка 'Log in'.
+    // Кнопка 'Cart' главного меню сайта.
+    // Локатор.
+    private final String CART = "cartur";
+    // Поиск при помощи паттерна PageFactory.
+    @FindBy(id = CART)
+    WebElement cart;
+    // Характеристики локатора.
+    Locator cartLocator = new Locator( "Кнопка 'Cart' главного меню сайта", "id" , CART);
+
+    // Кнопка 'Log in' главного меню сайта.
     // Локатор кнопки 'Log in'.
     private final String LOGIN_LOCATOR = "login2";
     // Поиск кнопки 'Log in' при помощи паттерна PageFactory.
@@ -26,6 +35,12 @@ public class MainMenu extends AbstractPage {
         super(browser);
     }
 
+
+    // Клик по кнопке 'Cart'.
+    public MainMenu clickCart () throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        clickElement(cart, cartLocator);
+        return this;
+    }
 
     // Клик по кнопке 'Log in'.
     public MainMenu clickLogIn() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {

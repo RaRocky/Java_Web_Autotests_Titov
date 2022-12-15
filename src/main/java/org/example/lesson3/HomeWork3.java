@@ -1,5 +1,6 @@
 package org.example.lesson3;
 
+import org.example.demoblase_com.testcases.AddProductOnCartAndDeleteTestCase;
 import org.example.demoblase_com.testcases.AuthorizationTestCase;
 import org.example.demoblase_com.testcases.PressLogoTestCase;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
@@ -20,6 +21,12 @@ public class HomeWork3 {
 
         // Выполнение тест-кейса №2. Авторизация пользователя.
         authorizationTestCase(browser);
+        // Запись в файл cookie с авторизованным пользователем
+        /*MyCookie cookie = new MyCookie(BrowserName.CHROME);
+        cookie.writeCookieToFile("./main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data");*/
+
+        // Выполнение тест-кейса №3. Добавление товара 'ASUS Full HD' в корзину с последующим удалением.
+        addProductOnCartAndDeleteTestCase(browser);
 
         // Остановка работы Selenium Web Driver. Закрытие браузера.
         browser.close();
@@ -30,14 +37,21 @@ public class HomeWork3 {
     public static void pressLogoTestCase(Browser browser)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         PressLogoTestCase testCase = new PressLogoTestCase(browser);
-        testCase.doTestCase();
+        testCase.doTestCase(testCase.getEXPLICIT_WAIT_TIME());
     }
 
     // Метод, выполняющий тест-кейс №2. Авторизация пользователя.
     public static void authorizationTestCase(Browser browser)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         AuthorizationTestCase testCase = new AuthorizationTestCase(browser);
-        testCase.doTestCase();
+        testCase.doTestCase(testCase.getEXPLICIT_WAIT_TIME());
 
+    }
+
+    // Метод, выполняющий тест-кейс №3. Добавление товара 'ASUS Full HD' в корзину с последующим удалением.
+    public static void addProductOnCartAndDeleteTestCase(Browser browser)
+            throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        AddProductOnCartAndDeleteTestCase testCase = new AddProductOnCartAndDeleteTestCase(browser);
+        testCase.doTestCase(testCase.getEXPLICIT_WAIT_TIME());
     }
 }

@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Изменения в служебных файлах.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/MainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AuthorizationTestCase.java" afterDir="false" />
+    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 3. Добавлен метод, реализующий тест-кейс №2. Авторизация пользователя.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/webdriver/cookie/MyCookie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/AuthorizationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/AuthorizationForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/Logo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/Logo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AbstractTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AuthorizationTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AuthorizationTestCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PressLogoTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PressLogoTestCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/webdriver/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +56,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_directory_selection": "C:/Users/Admin/IdeaProjects/Java_Web_Autotests_Titov/src/main/java/org/example",
-    "last_opened_file_path": "C:/Users/Admin/IdeaProjects/Java_Web_Autotests_Titov/src/main/java/org/example/servises",
-    "project.structure.last.edited": "Libraries",
+    "last_opened_file_path": "C:/Users/Admin/IdeaProjects/Java_Web_Autotests_Titov/src/main/java/org/example/servises/webdriver",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
@@ -248,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671069895598</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Home Work 3. Добавлен метод, реализующий тест-кейс №2. Авторизация пользователя.">
+      <created>1671080639867</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1671080639867</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -312,6 +321,7 @@
     <MESSAGE value="Создан Exception WrongPathOfLocatorException." />
     <MESSAGE value="Создан Exception WrongTypeOfLocatorException." />
     <MESSAGE value="Изменения в служебных файлах." />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменения в служебных файлах." />
+    <MESSAGE value="Home Work 3. Добавлен метод, реализующий тест-кейс №2. Авторизация пользователя." />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Work 3. Добавлен метод, реализующий тест-кейс №2. Авторизация пользователя." />
   </component>
 </project>

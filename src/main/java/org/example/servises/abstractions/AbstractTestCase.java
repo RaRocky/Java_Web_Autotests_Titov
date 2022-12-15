@@ -9,6 +9,8 @@ public class AbstractTestCase {
 
     // Объект класса Browser для управления браузером при помощи Selenium Web Driver.
     private final Browser browser;
+    // Время явного ожидания выполнения предусловия или шага в секундах.
+    private final int EXPLICIT_WAIT_TIME = 5;
 
 
     // Конструктор.
@@ -21,32 +23,48 @@ public class AbstractTestCase {
     public Browser getBrowser() {
         return browser;
     }
+    // Геттер времени явного ожидания.
+    public int getEXPLICIT_WAIT_TIME() {
+        return EXPLICIT_WAIT_TIME;
+    }
 
     // Метод, выполняющий все шаги тест-кейса.
-    public void doTestCase() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        precondition();
-        waitOfPrecondition();
+    public void doTestCase(int explicitWaitTime) throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        precondition1();
+        waitOfPrecondition1(explicitWaitTime);
+        precondition2();
+        waitOfPrecondition2(explicitWaitTime);
         step1();
-        waitOfStep1();
+        waitOfStep1(explicitWaitTime);
         step2();
-        waitOfStep2();
+        waitOfStep2(explicitWaitTime);
         step3();
-        waitOfStep3();
+        waitOfStep3(explicitWaitTime);
         step4();
-        waitOfStep4();
+        waitOfStep4(explicitWaitTime);
         step5();
-        waitOfStep5();
+        waitOfStep5(explicitWaitTime);
         step6();
-        waitOfStep6();
+        waitOfStep6(explicitWaitTime);
     }
 
-    // Предусловие.
-    public void precondition() {
+    // Предусловие №1.
+    public void precondition1() {
 
     }
 
-    // Ожидание выполнения предусловия.
-    public void waitOfPrecondition() {
+    // Ожидание выполнения предусловия №1.
+    public void waitOfPrecondition1(int explicitWaitTime) {
+
+    }
+
+    // Предусловие №2.
+    public void precondition2() {
+
+    }
+
+    // Ожидание выполнения предусловия №2.
+    public void waitOfPrecondition2(int explicitWaitTime) {
 
     }
 
@@ -56,7 +74,7 @@ public class AbstractTestCase {
     }
 
     // Ожидание выполнения шага №1.
-    public void waitOfStep1() {
+    public void waitOfStep1(int explicitWaitTime) {
 
     }
 
@@ -66,7 +84,7 @@ public class AbstractTestCase {
     }
 
     // Ожидание выполнения шага №2.
-    public void waitOfStep2() {
+    public void waitOfStep2(int explicitWaitTime) {
 
     }
 
@@ -76,7 +94,7 @@ public class AbstractTestCase {
     }
 
     // Ожидание выполнения шага №3.
-    public void waitOfStep3() {
+    public void waitOfStep3(int explicitWaitTime) {
 
     }
 
@@ -86,7 +104,7 @@ public class AbstractTestCase {
     }
 
     // Ожидание выполнения шага №4.
-    public void waitOfStep4() {
+    public void waitOfStep4(int explicitWaitTime) {
 
     }
 
@@ -96,7 +114,7 @@ public class AbstractTestCase {
     }
 
     // Ожидание выполнения шага №5.
-    public void waitOfStep5() {
+    public void waitOfStep5(int explicitWaitTime) {
 
     }
 
@@ -106,7 +124,7 @@ public class AbstractTestCase {
     }
 
     // Ожидание выполнения шага №6.
-    public void waitOfStep6() {
+    public void waitOfStep6(int explicitWaitTime) {
 
     }
 }

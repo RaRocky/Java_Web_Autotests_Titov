@@ -2,11 +2,13 @@ package org.example.servises.abstractions;
 
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
+import org.example.servises.webdriver.Browser;
 import org.example.servises.webdriver.Locator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+
 
 // Класс абстрактной страницы сайта. Содержит основные методы взаимодействия с веб-элементами сайта.
 public class AbstractPage {
@@ -15,8 +17,8 @@ public class AbstractPage {
 
 
     // Конструктор.
-    public AbstractPage(WebDriver webDriver) {
-        this.webDriver = webDriver;
+    public AbstractPage(Browser browser) {
+        this.webDriver = browser.getWebDriver();
         PageFactory.initElements(webDriver, this);
     }
 
@@ -25,6 +27,8 @@ public class AbstractPage {
     public WebDriver getWebDriver() {
         return this.webDriver;
     }
+
+
 
     // Проверка локатора на наличе в DOM-структуре и уникальность.
     public boolean checkLocator(Locator locator)

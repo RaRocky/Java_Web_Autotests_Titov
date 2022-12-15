@@ -16,9 +16,11 @@ import java.time.Duration;
 public class AuthorizationTestCase extends AbstractTestCase {
 
     // Объект главного меню сайта.
-    MainMenu mainMenu = new MainMenu(getBrowser().getWebDriver());
+    private final MainMenu mainMenu = new MainMenu(getBrowser());
     // Объект формы авторизации пользователя.
-    AuthorizationForm authorizationForm = new AuthorizationForm(getBrowser().getWebDriver());
+    private final AuthorizationForm authorizationForm = new AuthorizationForm(getBrowser());
+    // Пауза ожидания между действиями в миллисекундах
+    private final long PAUSE = 500;
 
 
     // Конструктор.
@@ -27,16 +29,17 @@ public class AuthorizationTestCase extends AbstractTestCase {
     }
 
 
-    // Предусловие.
+    // Предусловие. Переход на главную страницу сайта.
     @Override
-    public void precondition() {
+    public void precondition1() {
         getBrowser().goToUrl("https://www.demoblaze.com/index.html");
     }
 
     // Ожидание выполнения предусловия.
     @Override
-    public void waitOfPrecondition() {
-        new WebDriverWait(getBrowser().getWebDriver(), Duration.ofSeconds(5)).until(ExpectedConditions.urlContains(
+    public void waitOfPrecondition1(int explicitWaitTime) {
+        new WebDriverWait(getBrowser().getWebDriver(),
+                Duration.ofSeconds(explicitWaitTime)).until(ExpectedConditions.urlContains(
                 "https://www.demoblaze.com/index.html"));
     }
 
@@ -48,33 +51,34 @@ public class AuthorizationTestCase extends AbstractTestCase {
 
     // Ожидание выполнения шага №1.
     @Override
-    public void waitOfStep1() {
-        new WebDriverWait(getBrowser().getWebDriver(), Duration.ofSeconds(5)).until(ExpectedConditions
+    public void waitOfStep1(int explicitWaitTime) {
+        new WebDriverWait(getBrowser().getWebDriver(), Duration.ofSeconds(explicitWaitTime)).until(ExpectedConditions
                 .visibilityOfElementLocated(By.id("logInModal")));
     }
 
     // Шаг №2. Клик по полю ввода имени пользователя.
     @Override
     public void step2() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        authorizationForm.clickUserNameField();
+        authorizationForm.clickUserNameField().pause(PAUSE);
     }
 
     // Шаг №3. Ввод имени пользователя.
     @Override
     public void step3() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        authorizationForm.enterUserName("Bob Smith");
+        authorizationForm.enterUserName("Bob Smith").pause(PAUSE);
+
     }
 
     // Шаг №4. Клик по полю ввода пароля.
     @Override
     public void step4() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        authorizationForm.clickPasswordField();
+        authorizationForm.clickPasswordField().pause(PAUSE);
     }
 
     // Шаг №5. Ввод пароля.
     @Override
     public void step5() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        authorizationForm.enterPassword("Enter000");
+        authorizationForm.enterPassword("Enter000").pause(PAUSE);
     }
 
     // Шаг №6. Клик по кнопке 'Log in' в форме авторизации пользователя.
@@ -85,8 +89,8 @@ public class AuthorizationTestCase extends AbstractTestCase {
 
     // Ожидание выполнения шага №6.
     @Override
-    public void waitOfStep6() {
-        new WebDriverWait(getBrowser().getWebDriver(), Duration.ofSeconds(5)).until(ExpectedConditions
+    public void waitOfStep6(int explicitWaitTime) {
+        new WebDriverWait(getBrowser().getWebDriver(), Duration.ofSeconds(explicitWaitTime)).until(ExpectedConditions
                 .visibilityOfElementLocated(By.id("nameofuser")));
     }
 }

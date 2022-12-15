@@ -3,6 +3,8 @@ package org.example.demoblase_com.pages;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.abstractions.AbstractPage;
+import org.example.servises.webdriver.Browser;
+import org.example.servises.webdriver.BrowserName;
 import org.example.servises.webdriver.Locator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -48,8 +50,8 @@ public class AuthorizationForm extends AbstractPage {
 
 
     // Конструктор.
-    public AuthorizationForm(WebDriver webDriver) {
-        super(webDriver);
+    public AuthorizationForm(Browser browser) {
+        super(browser);
     }
 
 
@@ -63,7 +65,7 @@ public class AuthorizationForm extends AbstractPage {
     // Ввод имени пользователя.
     public AuthorizationForm enterUserName(String nameOfUser)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        if (checkLocator(userNameLocator)) userName.sendKeys(nameOfUser);
+        if (checkLocator(userNameLocator)) enterText(userName, "Bob Smith");
         return this;
     }
 
@@ -77,7 +79,7 @@ public class AuthorizationForm extends AbstractPage {
     // Ввод пароля.
     public AuthorizationForm enterPassword(String passwd)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        if (checkLocator(passwordLocator)) password.sendKeys(passwd);
+        if (checkLocator(passwordLocator)) enterText(password, "Enter000");
         return this;
     }
 

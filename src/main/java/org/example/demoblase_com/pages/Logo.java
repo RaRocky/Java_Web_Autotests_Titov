@@ -3,6 +3,8 @@ package org.example.demoblase_com.pages;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.abstractions.AbstractPage;
+import org.example.servises.webdriver.Browser;
+import org.example.servises.webdriver.BrowserName;
 import org.example.servises.webdriver.Locator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,8 +26,8 @@ public class Logo extends AbstractPage {
 
 
     // Конструктор.
-    public Logo(WebDriver webDriver) {
-        super(webDriver);
+    public Logo(Browser browser) {
+        super(browser);
     }
 
 

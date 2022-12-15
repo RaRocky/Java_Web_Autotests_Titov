@@ -14,7 +14,7 @@ import java.time.Duration;
 public class PressLogoTestCase extends AbstractTestCase {
 
     // Объект главного логотипа сайта.
-    Logo logo = new Logo(getBrowser().getWebDriver());
+    Logo logo = new Logo(getBrowser());
 
 
     // Конструктор.
@@ -23,16 +23,17 @@ public class PressLogoTestCase extends AbstractTestCase {
     }
 
 
-    // Предусловие.
+    // Предусловие. Открывается страница сайта, отличная от главной.
     @Override
-    public void precondition() {
+    public void precondition1() {
         getBrowser().goToUrl("https://www.demoblaze.com/prod.html?idp_=5");
     }
 
     // Ожидание выполнения предусловия.
     @Override
-    public void waitOfPrecondition() {
-        new WebDriverWait(getBrowser().getWebDriver(), Duration.ofSeconds(5)).until(ExpectedConditions.urlContains(
+    public void waitOfPrecondition1(int explicitWaitTime) {
+        new WebDriverWait(getBrowser().getWebDriver(),
+                Duration.ofSeconds(explicitWaitTime)).until(ExpectedConditions.urlContains(
                 "https://www.demoblaze.com/prod.html?idp_=5"));
     }
 
@@ -44,8 +45,9 @@ public class PressLogoTestCase extends AbstractTestCase {
 
     // Ожидание выполнения Шага №1.
     @Override
-    public void waitOfStep1() {
-        new WebDriverWait(getBrowser().getWebDriver(), Duration.ofSeconds(5)).until(ExpectedConditions.urlContains(
+    public void waitOfStep1(int explicitWaitTime) {
+        new WebDriverWait(getBrowser().getWebDriver(),
+                Duration.ofSeconds(explicitWaitTime)).until(ExpectedConditions.urlContains(
                 "https://www.demoblaze.com/index.html"));
     }
 }

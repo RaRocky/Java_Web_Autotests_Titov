@@ -105,7 +105,7 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
     // Шаг№5. Переход в раздел 'Cart' главного меню сайта.
     @Override
     public void step5() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-       getMainMenu().clickCart();
+        getMainMenu().clickCart();
     }
 
     // Ожидание выполнения шага №5.
@@ -126,7 +126,7 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
     // Ожидание выполнения шага №6.
     @Override
     public void waitOfStep6(int explicitWaitTime) {
-        getCartPage().pause();
-        getCartPage().pause();
+        new WebDriverWait(getBrowser().getWebDriver(), Duration.ofSeconds(explicitWaitTime)).until(ExpectedConditions
+                .invisibilityOf(getBrowser().getWebDriver().findElement(By.id("tbodyid"))));
     }
 }

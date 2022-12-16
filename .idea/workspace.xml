@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 3. Перенесением объекта главного логотипа в AbstractTestCase.">
+    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 3. Перенесены объекты веб-страниц в AbstractTestCase.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AuthorizationTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AuthorizationTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PressLogoTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PressLogoTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/webdriver/cookie/MyCookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/webdriver/cookie/MyCookie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671142272444</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Home Work 3. Перенесены объекты веб-страниц в AbstractTestCase.">
+      <created>1671145051147</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1671145051147</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,6 +354,7 @@
     <MESSAGE value="Home Work 3. Промежуточный коммит." />
     <MESSAGE value="Home Work 3. Перед перенесением веб-объектов в AbstractPage." />
     <MESSAGE value="Home Work 3. Перенесением объекта главного логотипа в AbstractTestCase." />
-    <option name="LAST_COMMIT_MESSAGE" value="Home Work 3. Перенесением объекта главного логотипа в AbstractTestCase." />
+    <MESSAGE value="Home Work 3. Перенесены объекты веб-страниц в AbstractTestCase." />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Work 3. Перенесены объекты веб-страниц в AbstractTestCase." />
   </component>
 </project>

@@ -31,9 +31,7 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
     // Предусловие №2. Добавление cookie с авторизованным пользователем.
     @Override
     public void precondition2() {
-        MyCookie cookie = new MyCookie(getBrowser());
-        cookie.addCookiesFromFile("./src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data");
-        getBrowser().getWebDriver().navigate().refresh();
+        addCookie("./src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data");
     }
 
     // Ожидание выполнения предусловия №2.

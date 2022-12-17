@@ -4,27 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 3. Изменение способа вычитки параметров cookie из файла. Через STRINGTokeniser выдавался NoSuchElementException.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/PlaceOrderForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlaceOrderTestCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/Settings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/webdriver/TypeOfLocator.java" afterDir="false" />
+    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 3. Добавлен тест-кейс №4. Оформление заказа.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/ContactForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/SendContactMessageTestCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/AsusFullHdMonitorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/AuthorizationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/AuthorizationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/CategoriesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/CategoriesMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/Logo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/Logo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/ProductsBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/ProductsBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AuthorizationTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AuthorizationTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PressLogoTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PressLogoTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlaceOrderTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlaceOrderTestCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/webdriver/Locator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/webdriver/Locator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671154828023</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Home Work 3. Добавлен тест-кейс №4. Оформление заказа.">
+      <created>1671276635344</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1671276635344</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -379,6 +375,7 @@
     <MESSAGE value="Home Work 3. Перенесением объекта главного логотипа в AbstractTestCase." />
     <MESSAGE value="Home Work 3. Перенесены объекты веб-страниц в AbstractTestCase." />
     <MESSAGE value="Home Work 3. Изменение способа вычитки параметров cookie из файла. Через STRINGTokeniser выдавался NoSuchElementException." />
-    <option name="LAST_COMMIT_MESSAGE" value="Home Work 3. Изменение способа вычитки параметров cookie из файла. Через STRINGTokeniser выдавался NoSuchElementException." />
+    <MESSAGE value="Home Work 3. Добавлен тест-кейс №4. Оформление заказа." />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Work 3. Добавлен тест-кейс №4. Оформление заказа." />
   </component>
 </project>

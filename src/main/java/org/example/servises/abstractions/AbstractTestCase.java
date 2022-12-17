@@ -6,6 +6,7 @@ import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
 import org.example.servises.webdriver.TypeOfLocator;
+import org.example.servises.webdriver.cookie.MyCookie;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -30,6 +31,8 @@ public class AbstractTestCase {
     private CartPage cartPage;
     // Объект меню категорий товаров.
     private CategoriesMenu categoriesMenu;
+    // Объект формы отправки сообщения в разделе 'Contact'.
+    private ContactForm contactForm;
     // Объект главного логотипа сайта.
     private Logo logo;
     // Объект главного меню сайта.
@@ -51,6 +54,7 @@ public class AbstractTestCase {
         setAuthorizationForm(browser);
         setCartPage(browser);
         setCategoriesMenu(browser);
+        setContactForm(browser);
         setLogo(browser);
         setMainMenu(browser);
         setPlaceOrderForm(browser);
@@ -100,6 +104,13 @@ public class AbstractTestCase {
     // Подтверждение действия на странице.
     public void acceptAlert () {
         getBrowser().getWebDriver().switchTo().alert().accept();
+    }
+
+    // Добавление Cookie.
+    public void addCookie (String filePath) {
+        MyCookie cookie = new MyCookie(getBrowser());
+        cookie.addCookiesFromFile(filePath);
+        getBrowser().getWebDriver().navigate().refresh();
     }
 
     // Пауза.
@@ -320,6 +331,11 @@ public class AbstractTestCase {
         return categoriesMenu;
     }
 
+    // Геттер объекта отправки формы сообщения в разделе 'Contact'.
+    public ContactForm getContactForm() {
+        return contactForm;
+    }
+
     // Геттер объекта главного логотипа сайта.
     public Logo getLogo() {
         return logo;
@@ -365,6 +381,11 @@ public class AbstractTestCase {
     // Сеттер объекта меню категорий товаров.
     public void setCategoriesMenu(Browser browser) {
         this.categoriesMenu = new CategoriesMenu(browser);
+    }
+
+    // Сеттер объекта отправки формы сообщения в разделе 'Contact'.
+    public void setContactForm(Browser browser) {
+        this.contactForm = new ContactForm(browser);
     }
 
     // Сеттер главного логотипа сайта.

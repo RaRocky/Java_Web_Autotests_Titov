@@ -12,14 +12,24 @@ import org.openqa.selenium.support.FindBy;
 // Класс главного меню сайта.
 public class MainMenu extends AbstractPage {
 
+    // Кнопка 'Contact' главного меню сайта.
+    // Локатор.
+    private final String CONTACT_LOCATOR = ".nav-item:nth-child(2) > .nav-link";
+    // Поиск при помощи паттерна PageFactory.
+    @FindBy(css = CONTACT_LOCATOR)
+    WebElement contact;
+    // Характеристики локатора.
+    Locator contactLocator =
+            new Locator("Кнопка 'Contact' главного меню сайта", TypeOfLocator.CSS, CONTACT_LOCATOR);
+
     // Кнопка 'Cart' главного меню сайта.
     // Локатор.
-    private final String CART = "cartur";
+    private final String CART_LOCATOR = "cartur";
     // Поиск при помощи паттерна PageFactory.
-    @FindBy(id = CART)
+    @FindBy(id = CART_LOCATOR)
     WebElement cart;
     // Характеристики локатора.
-    Locator cartLocator = new Locator( "Кнопка 'Cart' главного меню сайта", TypeOfLocator.ID , CART);
+    Locator cartLocator = new Locator("Кнопка 'Cart' главного меню сайта", TypeOfLocator.ID, CART_LOCATOR);
 
     // Кнопка 'Log in' главного меню сайта.
     // Локатор кнопки 'Log in'.
@@ -37,8 +47,14 @@ public class MainMenu extends AbstractPage {
     }
 
 
+    // Клик по кнопке 'Contact'.
+    public MainMenu clickContact () throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        clickElement(contact, contactLocator);
+        return this;
+    }
+
     // Клик по кнопке 'Cart'.
-    public MainMenu clickCart () throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public MainMenu clickCart() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         clickElement(cart, cartLocator);
         return this;
     }

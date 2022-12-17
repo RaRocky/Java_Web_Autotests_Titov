@@ -1,9 +1,6 @@
 package org.example.lesson3;
 
-import org.example.demoblase_com.testcases.AddProductOnCartAndDeleteTestCase;
-import org.example.demoblase_com.testcases.AuthorizationTestCase;
-import org.example.demoblase_com.testcases.PlaceOrderTestCase;
-import org.example.demoblase_com.testcases.PressLogoTestCase;
+import org.example.demoblase_com.testcases.*;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.BrowserName;
@@ -34,6 +31,9 @@ public class HomeWork3 {
 
         // Выполнение тест-кейса №4. Оформление заказа.
         placeOrderTestCase(browser);
+
+        // Выполнение тест-кейса №5. Отправление сообщения в разделе Contact.
+        sendContactMessageTestCase(browser);
 
         // Остановка работы Selenium Web Driver. Закрытие браузера.
         browser.close();
@@ -66,5 +66,12 @@ public class HomeWork3 {
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         PlaceOrderTestCase placeOrderTestCase = new PlaceOrderTestCase(browser, "Оформление заказа");
         placeOrderTestCase.doTestCase();
+    }
+
+    public static void sendContactMessageTestCase (Browser browser)
+            throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        SendContactMessageTestCase sendContactMessageTestCase =
+                new SendContactMessageTestCase(browser, "Отправление сообщения в разделе Contact");
+        sendContactMessageTestCase.doTestCase();
     }
 }

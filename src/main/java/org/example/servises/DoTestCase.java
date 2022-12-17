@@ -49,7 +49,7 @@ public class DoTestCase {
     public static void playAboutUsVideoTestCase(Browser browser)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         PlayAboutUsVideoTestCase playAboutUsVideoTestCase = new PlayAboutUsVideoTestCase(browser,
-                "Проверка возможности воспроизведения видео 'About us'.");
+                "Проверка возможности воспроизведения видео 'About us'");
         playAboutUsVideoTestCase.doTestCase();
     }
 }

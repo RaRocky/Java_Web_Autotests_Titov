@@ -42,6 +42,4 @@ public class HomeWork3 {
         // Остановка работы Selenium Web Driver. Закрытие браузера.
         browser.close();
     }
-
-
 }

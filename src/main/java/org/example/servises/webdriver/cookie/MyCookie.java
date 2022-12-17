@@ -5,8 +5,6 @@ import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.LinkedList;
 
 // Класс, реализующий функционал работы с cookie.
 public class MyCookie {

@@ -44,37 +44,13 @@ public class AuthorizationTestCase extends AbstractTestCase {
         explicitWaitOfVisibilityOfElementLocated(TypeOfLocator.ID, "logInModal");
     }
 
-    // Шаг №2. Клик по полю ввода имени пользователя.
+    // Шаг №2. Авторизация пользователя.
     @Override
     public void step2() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        getAuthorizationForm().clickUserNameField();
+        getAuthorizationForm().logIn("Bob Smith", "Enter000");
     }
 
-    // Шаг №3. Ввод имени пользователя.
-    @Override
-    public void step3() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        getAuthorizationForm().enterUserName("Bob Smith");
-    }
-
-    // Шаг №4. Клик по полю ввода пароля.
-    @Override
-    public void step4() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        getAuthorizationForm().clickPasswordField();
-    }
-
-    // Шаг №5. Ввод пароля.
-    @Override
-    public void step5() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        getAuthorizationForm().enterPassword("Enter000");
-    }
-
-    // Шаг №6. Клик по кнопке 'Log in' в форме авторизации пользователя.
-    @Override
-    public void step6() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        getAuthorizationForm().clickLogIn();
-    }
-
-    // Ожидание выполнения шага №6.
+    // Ожидание выполнения шага №2.
     @Override
     public void waitOfStep6() {
         explicitWaitOfVisibilityOfElementLocated(TypeOfLocator.ID, "nameofuser");

@@ -2,7 +2,7 @@ package org.example.servises;
 
 public class Settings {
     // Время паузы между действиями в миллмсекундах.
-    private final long PAUSE = 500;
+    private final long PAUSE = 100;
     // Время явного ожидания выполнения предусловия или шага в секундах.
     private final int EXPLICIT_WAIT_TIME = 5;
 

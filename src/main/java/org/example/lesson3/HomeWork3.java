@@ -1,6 +1,5 @@
 package org.example.lesson3;
 
-import org.example.demoblase_com.testcases.*;
 import org.example.servises.DoTestCase;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
@@ -42,6 +41,4 @@ public class HomeWork3 {
         // Остановка работы Selenium Web Driver. Закрытие браузера.
         browser.close();
     }
-
-
 }

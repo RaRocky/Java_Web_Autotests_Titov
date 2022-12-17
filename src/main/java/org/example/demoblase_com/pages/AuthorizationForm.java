@@ -9,7 +9,7 @@ import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-// Класс формы авторизации пользователя.
+// Класс объекта формы авторизации пользователя.
 public class AuthorizationForm extends AbstractPage {
 
     // Поле ввода имени пользователя.

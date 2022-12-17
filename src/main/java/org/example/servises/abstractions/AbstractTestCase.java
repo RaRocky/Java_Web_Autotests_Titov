@@ -9,7 +9,6 @@ import org.example.servises.webdriver.TypeOfLocator;
 import org.example.servises.webdriver.cookie.MyCookie;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 

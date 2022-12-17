@@ -9,7 +9,7 @@ import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-// Класс главного логотип сайта.
+// Класс объекта главного логотип сайта.
 public class Logo extends AbstractPage {
 
     // Главный логотип сайта.

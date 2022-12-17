@@ -9,6 +9,7 @@ import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+// Класс объекта формы оформления заказа.
 public class PlaceOrderForm extends AbstractPage {
 
     // Поле ввода имени пользователя.

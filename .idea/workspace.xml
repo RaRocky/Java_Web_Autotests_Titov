@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 3. Создание класса DoTestCase, содержащего методы реализации тест-кейсов.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AuthorizationTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AuthorizationTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlaceOrderTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlaceOrderTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlayAboutUsVideoTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlayAboutUsVideoTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" afterDir="false" />
+    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 3. Создание в классе AbstractTestCase метода, реализующего явное ожидание появления веб-элемента, содержащего указанный текст.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671291941038</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Home Work 3. Создание в классе AbstractTestCase метода, реализующего явное ожидание появления веб-элемента, содержащего указанный текст.">
+      <created>1671294165771</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1671294165771</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -370,7 +371,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Создан класс AbstractTestCase." />
     <MESSAGE value="Создан класс Browser." />
     <MESSAGE value="Создан класс AuthorizationForm." />
     <MESSAGE value="Создан Enum BrowserName." />
@@ -395,6 +395,7 @@
     <MESSAGE value="Home Work 3. Добавлен тест-кейс №5. Отправление сообщения в разделе 'Contact'." />
     <MESSAGE value="Home Work 3. Добавлен тест-кейс №6. Проверка возможности воспроизведения видео 'About us'." />
     <MESSAGE value="Home Work 3. Создание класса DoTestCase, содержащего методы реализации тест-кейсов." />
-    <option name="LAST_COMMIT_MESSAGE" value="Home Work 3. Создание класса DoTestCase, содержащего методы реализации тест-кейсов." />
+    <MESSAGE value="Home Work 3. Создание в классе AbstractTestCase метода, реализующего явное ожидание появления веб-элемента, содержащего указанный текст." />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Work 3. Создание в классе AbstractTestCase метода, реализующего явное ожидание появления веб-элемента, содержащего указанный текст." />
   </component>
 </project>

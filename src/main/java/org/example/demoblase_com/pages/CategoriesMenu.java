@@ -9,7 +9,7 @@ import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-// Класс меню категорий товаров.
+// Класс объекта меню категорий товаров.
 public class CategoriesMenu extends AbstractPage {
 
     // Кнопка 'Monitors' меню категорий товаров.

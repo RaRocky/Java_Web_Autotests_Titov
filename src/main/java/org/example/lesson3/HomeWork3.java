@@ -32,8 +32,11 @@ public class HomeWork3 {
         // Выполнение тест-кейса №4. Оформление заказа.
         placeOrderTestCase(browser);
 
-        // Выполнение тест-кейса №5. Отправление сообщения в разделе Contact.
+        // Выполнение тест-кейса №5. Отправление сообщения в разделе 'Contact'.
         sendContactMessageTestCase(browser);
+
+        // Выполнение тест-кейса №6. Проверка возможности воспроизведения видео 'About us'.
+        playAboutUsVideoTestCase(browser);
 
         // Остановка работы Selenium Web Driver. Закрытие браузера.
         browser.close();
@@ -68,10 +71,19 @@ public class HomeWork3 {
         placeOrderTestCase.doTestCase();
     }
 
-    public static void sendContactMessageTestCase (Browser browser)
+    // Метод, выполняющий тест-кейс №5. Отправление сообщения в разделе 'Contact'.
+    public static void sendContactMessageTestCase(Browser browser)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         SendContactMessageTestCase sendContactMessageTestCase =
                 new SendContactMessageTestCase(browser, "Отправление сообщения в разделе Contact");
         sendContactMessageTestCase.doTestCase();
+    }
+
+    // Метод, выполняющий тест-кейс №6. Проверка возможности воспроизведения видео 'About us'.
+    public static void playAboutUsVideoTestCase(Browser browser)
+            throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        PlayAboutUsVideoTestCase playAboutUsVideoTestCase = new PlayAboutUsVideoTestCase(browser,
+                "Проверка возможности воспроизведения видео 'About us'.");
+        playAboutUsVideoTestCase.doTestCase();
     }
 }

@@ -25,6 +25,8 @@ public class AbstractTestCase {
     private final Browser browser;
     // Объект JavascriptExecutor для управления страницей сайта при помощи JS скриптов.
     private JavascriptExecutor javascriptExecutor;
+    // Объект окна 'About Us'.
+    private AboutUsWindow aboutUsWindow;
     // Объект формы авторизации пользователя.
     private AuthorizationForm authorizationForm;
     // Объект страницы корзины товаров.
@@ -51,6 +53,7 @@ public class AbstractTestCase {
         this.testCaseName = testCaseName;
         this.browser = browser;
         this.javascriptExecutor = (JavascriptExecutor) browser.getWebDriver();
+        setAboutUsWindow(browser);
         setAuthorizationForm(browser);
         setCartPage(browser);
         setCategoriesMenu(browser);
@@ -316,6 +319,11 @@ public class AbstractTestCase {
         return javascriptExecutor;
     }
 
+    // Геттер объекта окна 'About us'.
+    public AboutUsWindow getAboutUsWindow() {
+        return aboutUsWindow;
+    }
+
     // Геттер объекта формы авторизации пользователя.
     public AuthorizationForm getAuthorizationForm() {
         return authorizationForm;
@@ -366,6 +374,11 @@ public class AbstractTestCase {
     // Сеттер объекта настроек проекта.
     public void setSettings() {
         this.settings = new Settings();
+    }
+
+    // Сеттер объекта окна 'About us'.
+    public void setAboutUsWindow(Browser browser) {
+        this.aboutUsWindow = new AboutUsWindow(browser);
     }
 
     // Сеттер объекта формы авторизации пользователя.

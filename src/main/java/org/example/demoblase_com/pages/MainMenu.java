@@ -22,6 +22,16 @@ public class MainMenu extends AbstractPage {
     Locator contactLocator =
             new Locator("Кнопка 'Contact' главного меню сайта", TypeOfLocator.CSS, CONTACT_LOCATOR);
 
+    // Кнопка 'About us' главного меню сайта.
+    // Локатор.
+    private final String ABOUT_US_LOCATOR = ".nav-item:nth-child(3) > .nav-link";
+    // Поиск при помощи паттерна PageFactory.
+    @FindBy(css = ABOUT_US_LOCATOR)
+    WebElement aboutUs;
+    // Характеристики локатора.
+    Locator aboutUsLocator =
+            new Locator("Кнопка 'About us' главного меню сайта", TypeOfLocator.CSS, ABOUT_US_LOCATOR);
+
     // Кнопка 'Cart' главного меню сайта.
     // Локатор.
     private final String CART_LOCATOR = "cartur";
@@ -48,8 +58,14 @@ public class MainMenu extends AbstractPage {
 
 
     // Клик по кнопке 'Contact'.
-    public MainMenu clickContact () throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public MainMenu clickContact() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         clickElement(contact, contactLocator);
+        return this;
+    }
+
+    // Клик по кнопке 'About us'.
+    public MainMenu clickAboutUs () throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        clickElement(aboutUs, aboutUsLocator);
         return this;
     }
 

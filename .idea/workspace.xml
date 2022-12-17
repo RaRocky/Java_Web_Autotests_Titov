@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 3. Добавлен тест-кейс №4. Оформление заказа.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/ContactForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/SendContactMessageTestCase.java" afterDir="false" />
+    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 3. Добавлен тест-кейс №5. Отправление сообщения в разделе 'Contact'.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/AboutUsWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlayAboutUsVideoTestCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlaceOrderTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlaceOrderTestCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" afterDir="false" />
     </list>
@@ -304,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671276635344</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Home Work 3. Добавлен тест-кейс №5. Отправление сообщения в разделе 'Contact'.">
+      <created>1671287460594</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1671287460594</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -351,7 +356,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Создание проекта Maven.&#10;Внесение изменений в POM.xml.&#10;Внесение изменений в классы App  и AppTest с целью создания демо-теста." />
     <MESSAGE value="1. Подключение библиотеки Selenium-java_4.7.1 (рекомендуемая последняя).&#10;2. Подключение библиотеки WebDriverManager_5.3.1 (рекомендуемая последняя)." />
     <MESSAGE value="Создан класс AbstractPage." />
     <MESSAGE value="Создан класс AbstractTestCase." />
@@ -376,6 +380,7 @@
     <MESSAGE value="Home Work 3. Перенесены объекты веб-страниц в AbstractTestCase." />
     <MESSAGE value="Home Work 3. Изменение способа вычитки параметров cookie из файла. Через STRINGTokeniser выдавался NoSuchElementException." />
     <MESSAGE value="Home Work 3. Добавлен тест-кейс №4. Оформление заказа." />
-    <option name="LAST_COMMIT_MESSAGE" value="Home Work 3. Добавлен тест-кейс №4. Оформление заказа." />
+    <MESSAGE value="Home Work 3. Добавлен тест-кейс №5. Отправление сообщения в разделе 'Contact'." />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Work 3. Добавлен тест-кейс №5. Отправление сообщения в разделе 'Contact'." />
   </component>
 </project>

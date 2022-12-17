@@ -9,6 +9,7 @@ import org.example.servises.webdriver.TypeOfLocator;
 import org.example.servises.webdriver.cookie.MyCookie;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -105,12 +106,12 @@ public class AbstractTestCase {
     }
 
     // Подтверждение действия на странице.
-    public void acceptAlert () {
+    public void acceptAlert() {
         getBrowser().getWebDriver().switchTo().alert().accept();
     }
 
     // Добавление Cookie.
-    public void addCookie (String filePath) {
+    public void addCookie(String filePath) {
         MyCookie cookie = new MyCookie(getBrowser());
         cookie.addCookiesFromFile(filePath);
         getBrowser().getWebDriver().navigate().refresh();
@@ -187,6 +188,39 @@ public class AbstractTestCase {
                 new WebDriverWait(getBrowser().getWebDriver(),
                         Duration.ofSeconds(getEXPLICIT_WAIT_TIME())).until(ExpectedConditions
                         .invisibilityOf(getBrowser().getWebDriver().findElement(By.xpath(pathOfLocator))));
+                break;
+
+            default:
+                break;
+        }
+
+    }
+
+    // Метод, реализующий явное ожидание появления в DOM-структуре элемента, содержащего указанный текст.
+    public void explicitWaitOfTextContainsInElementLocated(TypeOfLocator typeOfLocator, String pathOfLocator, String text) {
+        switch (typeOfLocator)  {
+            case ID:
+                new WebDriverWait(getBrowser().getWebDriver(),
+                        Duration.ofSeconds(getEXPLICIT_WAIT_TIME()))
+                        .until(ExpectedConditions
+                                .textToBePresentInElement(getBrowser()
+                                        .getWebDriver().findElement(By.id(pathOfLocator)), text));
+                break;
+
+            case CSS:
+                new WebDriverWait(getBrowser().getWebDriver(),
+                        Duration.ofSeconds(getEXPLICIT_WAIT_TIME()))
+                        .until(ExpectedConditions
+                                .textToBePresentInElement(getBrowser()
+                                        .getWebDriver().findElement(By.cssSelector(pathOfLocator)), text));
+                break;
+
+            case XPATH:
+                new WebDriverWait(getBrowser().getWebDriver(),
+                        Duration.ofSeconds(getEXPLICIT_WAIT_TIME()))
+                        .until(ExpectedConditions
+                                .textToBePresentInElement(getBrowser()
+                                        .getWebDriver().findElement(By.xpath(pathOfLocator)), text));
                 break;
 
             default:

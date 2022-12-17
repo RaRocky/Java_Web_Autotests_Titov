@@ -47,7 +47,7 @@ public class PlayAboutUsVideoTestCase extends AbstractTestCase {
     // Ожидание выполнения шага №2.
     @Override
     public void waitOfStep2() {
-        super.waitOfStep2();
+        explicitWaitOfTextContainsInElementLocated(TypeOfLocator.CSS, ".vjs-play-control", "Pause");
     }
 
     // Шаг №3. Нажатие на кнопку 'Close'.

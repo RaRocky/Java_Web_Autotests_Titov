@@ -5,11 +5,6 @@ import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
 import org.example.servises.webdriver.TypeOfLocator;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 // Класс объекта с функционалом тест-кейса №2. Авторизация пользователя.
 public class AuthorizationTestCase extends AbstractTestCase {

@@ -5,7 +5,6 @@ import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
 import org.example.servises.webdriver.TypeOfLocator;
-import org.example.servises.webdriver.cookie.MyCookie;
 
 // Класс объекта тест-кейса №4. Оформление заказа.
 public class PlaceOrderTestCase extends AbstractTestCase {
@@ -14,6 +13,7 @@ public class PlaceOrderTestCase extends AbstractTestCase {
     public PlaceOrderTestCase(Browser browser, String testCaseName) {
         super(browser, testCaseName);
     }
+
 
     // Предусловие №1. Переход на главную страницу.
     @Override
@@ -109,10 +109,5 @@ public class PlaceOrderTestCase extends AbstractTestCase {
     @Override
     public void waitOfStep7() {
         explicitWaitOfVisibilityOfElementLocated(TypeOfLocator.CSS, ".sweet-alert");
-    }
-
-    @Override
-    public void testPassedSuccessfully() {
-        super.testPassedSuccessfully();
     }
 }

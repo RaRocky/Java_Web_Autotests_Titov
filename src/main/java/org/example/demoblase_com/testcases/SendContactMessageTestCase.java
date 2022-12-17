@@ -69,49 +69,4 @@ public class SendContactMessageTestCase extends AbstractTestCase {
     public void step3() {
         getBrowser().getWebDriver().switchTo().alert().accept();
     }
-
-    @Override
-    public void waitOfStep3() {
-        super.waitOfStep3();
-    }
-
-    @Override
-    public void step4() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        super.step4();
-    }
-
-    @Override
-    public void waitOfStep4() {
-        super.waitOfStep4();
-    }
-
-    @Override
-    public void step5() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        super.step5();
-    }
-
-    @Override
-    public void waitOfStep5() {
-        super.waitOfStep5();
-    }
-
-    @Override
-    public void step6() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        super.step6();
-    }
-
-    @Override
-    public void waitOfStep6() {
-        super.waitOfStep6();
-    }
-
-    @Override
-    public void step7() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        super.step7();
-    }
-
-    @Override
-    public void waitOfStep7() {
-        super.waitOfStep7();
-    }
 }

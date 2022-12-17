@@ -5,7 +5,6 @@ import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
 import org.example.servises.webdriver.TypeOfLocator;
-import org.example.servises.webdriver.cookie.MyCookie;
 
 // Класс объекта с функционалом тест-кейса №3. Добавление товара 'ASUS Full HD' в корзину с последующим удалением.
 public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {

@@ -5,7 +5,6 @@ import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 
 import java.io.*;
-import java.util.StringTokenizer;
 
 // Класс, реализующий функционал работы с cookie.
 public class MyCookie {
@@ -60,68 +59,31 @@ public class MyCookie {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             // Чтение файла построчно при помощи BufferedReader.
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
+            String reader;
+            while ((reader = bufferedReader.readLine()) != null) {
+                String[] values = reader.split(";");    // Массив строковых значений, разделенных ";".
+                String name = values[0];        // имя cookie-файла.
+                String value  = values[1];      // значение cookie.
+                String domain = values [2];     // домен, имеющий доступ к cookie.
+                String path = values[3];        // путь к директории на сервере, для которой будут доступны cookie.
+                String isSecureStr = values[4]; // параметр указывает браузеру, что cookie должны
+                                                // передаваться на сервер только по защищённому https-соединению.
 
-                // Чтение параметров Cookie, разделенных ";".
-                StringTokenizer token = new StringTokenizer(line, ";");
+                boolean isSecure;
+                isSecure = isSecureStr.equals("true");  // Приведение из строкового значения в boolean.
 
-                while (token.hasMoreTokens()) {
-                    String name = token.nextToken();    // имя cookie-файла.
-                    String value = token.nextToken();   // значение cookie.
-                    String domain = token.nextToken();  // домен, имеющий доступ к cookie.
-                    String path = token.nextToken();    //  путь к директории на сервере, для которой будут доступны cookie.
-                    //String date = token.nextToken();  // дата и время, до которого cookie будет доступна.
-                    String isSecureStr = token.nextToken(); // параметр указывает браузеру, что cookie должны
-                                                            // передаваться на сервер только по защищённому https-соединению.
+                // Создание нового объекта cookie на основании прочитанных из файла параметров.
+                Cookie cookie = new Cookie.Builder(name, value)
+                        .domain(domain)
+                        .path(path)
+                        .isSecure(isSecure)
+                        .build();
 
-                   /* // Разделение составляющих даты.
-                    String[] partsOfDate = date.split("\\s");
-                    int year = Integer.parseInt(partsOfDate[5]);
-                    String monthStr = partsOfDate[1];
-                    int dayOfMonth = Integer.parseInt(partsOfDate[2]);
-                    String time = partsOfDate[3];
-
-                    // Замена сокращенного названия месяца соответствующим числовым значением.
-                    int month = 0;
-                    if (monthStr.equals("Jan")) month = 1;
-                    if (monthStr.equals("Feb")) month = 2;
-                    if (monthStr.equals("Mar")) month = 3;
-                    if (monthStr.equals("Apr")) month = 4;
-                    if (monthStr.equals("May")) month = 5;
-                    if (monthStr.equals("June")) month = 6;
-                    if (monthStr.equals("July")) month = 7;
-                    if (monthStr.equals("Aug")) month = 8;
-                    if (monthStr.equals("Sep")) month = 9;
-                    if (monthStr.equals("Oct")) month = 10;
-                    if (monthStr.equals("Nov")) month = 11;
-                    if (monthStr.equals("Dec")) month = 12;
-
-
-                    // Разделение времени на часы, минуты и секунды.
-                    String[] partsOfTime = time.split(":");
-                    int hours = Integer.parseInt(partsOfTime[0]);
-                    int minutes = Integer.parseInt(partsOfTime[1]);
-                    int seconds = Integer.parseInt(partsOfTime[2]);*/
-
-                    boolean isSecure;
-                    isSecure = isSecureStr.equals("true");
-
-                    // Создание нового объекта cookie на основании прочитанных из файла параметров.
-                    Cookie cookie = new Cookie.Builder(name, value)
-                            .domain(domain)
-                            .path(path)
-                            //.expiresOn(new Date(year, month, dayOfMonth, hours, minutes, seconds))
-                            .isSecure(isSecure)
-                            .build();
-
-                    // добавление cookie в текущую сессию браузера.
-                    webDriver.manage().addCookie(cookie);
-                }
+                // добавление cookie в текущую сессию браузера.
+                webDriver.manage().addCookie(cookie);
             }
-            fileReader.close();
-            bufferedReader.close();
-        } catch (Exception ex) {
+        } catch (
+                Exception ex) {
             ex.printStackTrace();
         }
     }

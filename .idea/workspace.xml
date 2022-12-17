@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 3. Промежуточный коммит.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/AsusFullHdMonitorPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/CartPage.java" afterDir="false" />
+    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 3. Создание класса DoTestCase, содержащего методы реализации тест-кейсов.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/pages/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AuthorizationTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/AuthorizationTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlaceOrderTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlaceOrderTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlayAboutUsVideoTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demoblase_com/testcases/PlayAboutUsVideoTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +267,63 @@
       <option name="project" value="LOCAL" />
       <updated>1671133527967</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Home Work 3. Перед перенесением веб-объектов в AbstractPage.">
+      <created>1671139485658</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1671139485658</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Home Work 3. Перенесением объекта главного логотипа в AbstractTestCase.">
+      <created>1671142272444</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1671142272444</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Home Work 3. Перенесены объекты веб-страниц в AbstractTestCase.">
+      <created>1671145051147</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1671145051147</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Home Work 3. Изменение способа вычитки параметров cookie из файла. Через STRINGTokeniser выдавался NoSuchElementException.">
+      <created>1671154828023</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1671154828023</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Home Work 3. Добавлен тест-кейс №4. Оформление заказа.">
+      <created>1671276635344</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1671276635344</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Home Work 3. Добавлен тест-кейс №5. Отправление сообщения в разделе 'Contact'.">
+      <created>1671287460594</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1671287460594</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Home Work 3. Добавлен тест-кейс №6. Проверка возможности воспроизведения видео 'About us'.">
+      <created>1671290736467</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1671290736467</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Home Work 3. Создание класса DoTestCase, содержащего методы реализации тест-кейсов.">
+      <created>1671291941038</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1671291941038</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,9 +370,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Создание проекта Maven.&#10;Внесение изменений в POM.xml.&#10;Внесение изменений в классы App  и AppTest с целью создания демо-теста." />
-    <MESSAGE value="1. Подключение библиотеки Selenium-java_4.7.1 (рекомендуемая последняя).&#10;2. Подключение библиотеки WebDriverManager_5.3.1 (рекомендуемая последняя)." />
-    <MESSAGE value="Создан класс AbstractPage." />
     <MESSAGE value="Создан класс AbstractTestCase." />
     <MESSAGE value="Создан класс Browser." />
     <MESSAGE value="Создан класс AuthorizationForm." />
@@ -335,6 +387,14 @@
     <MESSAGE value="Home Work 3. Добавлен метод, реализующий тест-кейс №2. Авторизация пользователя." />
     <MESSAGE value="Home Work 3. Начало разработки метода добавления товара. Вопрос с куки." />
     <MESSAGE value="Home Work 3. Промежуточный коммит." />
-    <option name="LAST_COMMIT_MESSAGE" value="Home Work 3. Промежуточный коммит." />
+    <MESSAGE value="Home Work 3. Перед перенесением веб-объектов в AbstractPage." />
+    <MESSAGE value="Home Work 3. Перенесением объекта главного логотипа в AbstractTestCase." />
+    <MESSAGE value="Home Work 3. Перенесены объекты веб-страниц в AbstractTestCase." />
+    <MESSAGE value="Home Work 3. Изменение способа вычитки параметров cookie из файла. Через STRINGTokeniser выдавался NoSuchElementException." />
+    <MESSAGE value="Home Work 3. Добавлен тест-кейс №4. Оформление заказа." />
+    <MESSAGE value="Home Work 3. Добавлен тест-кейс №5. Отправление сообщения в разделе 'Contact'." />
+    <MESSAGE value="Home Work 3. Добавлен тест-кейс №6. Проверка возможности воспроизведения видео 'About us'." />
+    <MESSAGE value="Home Work 3. Создание класса DoTestCase, содержащего методы реализации тест-кейсов." />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Work 3. Создание класса DoTestCase, содержащего методы реализации тест-кейсов." />
   </component>
 </project>

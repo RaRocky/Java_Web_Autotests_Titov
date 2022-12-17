@@ -1,9 +1,11 @@
 package org.example.demoblase_com.pages;
 
 import org.example.servises.abstractions.AbstractPage;
+import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
 import org.example.servises.webdriver.Locator;
+import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -17,7 +19,16 @@ public class CartPage extends AbstractPage {
     WebElement delete;
     // Характеристики локатора.
     Locator deleteLocator = new Locator("Кнопка 'Delete' в столбце удаления товара в таблице корзины товаров",
-            "css" ,DELETE_LOCATOR);
+            TypeOfLocator.CSS, DELETE_LOCATOR);
+
+    // Кнопка 'Place order'.
+    // Локатор.
+    private final String PLACE_ORDER_LOCATOR = ".btn-success";
+    // Поиск при помощи паттерна PageFactory.
+    @FindBy(css = PLACE_ORDER_LOCATOR)
+    WebElement placeOrderButton;
+    // Характеристики локатора.
+    Locator placeOrderButtonLocator = new Locator("Кнопка 'Place order'", TypeOfLocator.CSS, PLACE_ORDER_LOCATOR);
 
 
     // Конструктор.
@@ -25,9 +36,16 @@ public class CartPage extends AbstractPage {
         super(browser);
     }
 
+
     // Клик по кнопке "Delete".
-    public CartPage clickDelete () throws WrongTypeOfLocatorException {
+    public CartPage clickDelete() throws WrongTypeOfLocatorException {
         clickElement(delete, deleteLocator);
+        return this;
+    }
+
+    // Клик по кнопке 'Place order'.
+    public CartPage clickPlaceOrderButton () throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        clickElement(placeOrderButton, placeOrderButtonLocator);
         return this;
     }
 }

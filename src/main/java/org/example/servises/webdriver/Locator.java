@@ -6,12 +6,12 @@ import org.openqa.selenium.WebElement;
 public class Locator {
 
     private final String name;  // Имя веб-элемента.
-    private final String type;  // Тип локатора для поиска веб-элемента. ("id", "css", "xpath").
+    private final TypeOfLocator type;  // Тип локатора для поиска веб-элемента. ("id", "css", "xpath").
     private final String path;  // Локатор веб-элемента.
 
 
     // Конструктор.
-    public Locator(String name, String type, String path) {
+    public Locator(String name, TypeOfLocator type, String path) {
         this.name = name;
         this.type = type;
         this.path = path;
@@ -24,7 +24,7 @@ public class Locator {
     }
 
     // Геттер типа локатора веб-элемента.
-    public String getType() {
+    public TypeOfLocator getType() {
         return type;
     }
 

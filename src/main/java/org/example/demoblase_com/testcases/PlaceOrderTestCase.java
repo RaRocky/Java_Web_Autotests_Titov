@@ -6,16 +6,16 @@ import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
 import org.example.servises.webdriver.TypeOfLocator;
 
-// Класс объекта с функционалом тест-кейса №3. Добавление товара 'ASUS Full HD' в корзину с последующим удалением.
-public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
+// Класс объекта тест-кейса №4. Оформление заказа.
+public class PlaceOrderTestCase extends AbstractTestCase {
 
     // Конструктор.
-    public AddProductOnCartAndDeleteTestCase(Browser browser) {
-        super(browser, "Добавление товара 'ASUS Full HD' в корзину с последующим удалением");
+    public PlaceOrderTestCase(Browser browser, String testCaseName) {
+        super(browser, testCaseName);
     }
 
 
-    // Предусловие №1. Переход на главную страницу сайта.
+    // Предусловие №1. Переход на главную страницу.
     @Override
     public void precondition1() {
         getBrowser().goToUrl("https://www.demoblaze.com/index.html");
@@ -39,31 +39,25 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
         explicitWaitOfVisibilityOfElementLocated(TypeOfLocator.ID, "nameofuser");
     }
 
-    // Шаг№1. Переход на страницу категории 'Monitors'.
+    // Шаг №1. Прокручивание страницы вниз до конца.
     @Override
-    public void step1() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        getCategoriesMenu().clickMonitors();
+    public void step1() {
+        scrollPageBy(1000);
     }
 
-    // Ожидание выполнения шага №1.
-    @Override
-    public void waitOfStep1() {
-        explicitWaitOfUrlContains("https://www.demoblaze.com/index.html#");
-    }
-
-    // Шаг№2. Переход на страницу товара 'ASUS Full HD'.
+    // Шаг №2. Переход на страницу товара 'Sony vaio i5'.
     @Override
     public void step2() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        getProductsBlock().clickAsusFullHd();
+        getProductsBlock().clickSonyVioI5();
     }
 
     // Ожидание выполнения шага №2.
     @Override
     public void waitOfStep2() {
-        explicitWaitOfUrlContains("https://www.demoblaze.com/prod.html?idp_=14");
+        explicitWaitOfUrlContains("https://www.demoblaze.com/prod.html?idp_=8");
     }
 
-    // Шаг№3. Нажатие на кнопку 'Add to cart'.
+    // Шаг №3. Нажатие на кнопку 'Add to cart'.
     @Override
     public void step3() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         getProductPage().clickAddToCartButton();
@@ -75,13 +69,13 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
         explicitWaitOfAlertIsPresent();
     }
 
-    // Шаг№4. Подтверждение действия на странице.
+    // Шаг №4. Подтверждение действия на странице.
     @Override
     public void step4() {
         acceptAlert();
     }
 
-    // Шаг№5. Переход в раздел 'Cart' главного меню сайта.
+    // Шаг №5. Переход в раздел 'Cart' главного меню сайта.
     @Override
     public void step5() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         getMainMenu().clickCart();
@@ -93,15 +87,27 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
         explicitWaitOfUrlContains("https://www.demoblaze.com/cart.html");
     }
 
-    // Шаг №6. Нажатие на кнопку Delete. Удаление товара из корзины.
+    // Шаг №6. Нажатие кнопки 'Place order'.
     @Override
     public void step6() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        getCartPage().clickDelete();
+        getCartPage().clickPlaceOrderButton();
     }
 
-    // Ожидание выполнения шага №6.
     @Override
     public void waitOfStep6() {
-        explicitWaitOfInvisibilityOfElementLocated(TypeOfLocator.ID, "tbodyid");
+        explicitWaitOfVisibilityOfElementLocated(TypeOfLocator.ID, "orderModalLabel");
+    }
+
+    // Шаг №7. Отправление формы оформления заказа.
+    @Override
+    public void step7() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        getPlaceOrderForm().placeOrder("Bob Smith", "USA", "New York",
+                "0000 0000 0000 0000", "December", "2022");
+    }
+
+    // Ожидание выполнения шага №7.
+    @Override
+    public void waitOfStep7() {
+        explicitWaitOfVisibilityOfElementLocated(TypeOfLocator.CSS, ".sweet-alert");
     }
 }

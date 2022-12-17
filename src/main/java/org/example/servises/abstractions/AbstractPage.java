@@ -1,6 +1,6 @@
 package org.example.servises.abstractions;
 
-import org.example.demoblase_com.pages.AsusFullHdMonitorPage;
+import org.example.servises.Settings;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 
     /*// Шаблон.
     // Локатор.
-    private final String = _LOCATOR;
+    private final String _LOCATOR =;
     // Поиск при помощи паттерна PageFactory.
     @FindBy()
     WebElement ;
@@ -23,28 +23,22 @@ import org.openqa.selenium.support.PageFactory;
 // Класс абстрактной страницы сайта. Содержит основные методы взаимодействия с веб-элементами сайта.
 public class AbstractPage {
 
-    // Время паузы между действиями в миллмсекундах.
-    private final long PAUSE = 500;
-
     // Объект класса WebDriver.
     private final WebDriver webDriver;
 
-
+    // Объект настроек проекта.
+    private Settings settings;
 
 
     // Конструктор.
     public AbstractPage(Browser browser) {
+        this.settings = new Settings();
         this.webDriver = browser.getWebDriver();
         PageFactory.initElements(webDriver, this);
     }
 
 
-    // Геттер объект класса WebDriver.
-    public WebDriver getWebDriver() {
-        return this.webDriver;
-    }
-
-
+    // Методы класса.
     // Проверка локатора на наличе в DOM-структуре и уникальность.
     public boolean checkLocator(Locator locator)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
@@ -55,21 +49,21 @@ public class AbstractPage {
         // Подсчет количества элементов осуществляется при помощи метода webDriver.findElements().size().
         // Выбор варианта поиска элементов, в зависимости от типа локатора.
         switch (locator.getType()) {
-            case "id":
+            case ID:
                 countOfElements = webDriver.findElements(By.id(locator.getPath())).size();
                 break;
 
-            case "css":
+            case CSS:
                 countOfElements = webDriver.findElements(By.cssSelector(locator.getPath())).size();
                 break;
 
-            case "xpath":
+            case XPATH:
                 countOfElements = webDriver.findElements(By.xpath(locator.getPath())).size();
                 break;
 
             default:
                 throw new WrongTypeOfLocatorException("Неверно указан тип локатора для элемента '" +
-                        locator.getName() + "'. Возможные варианты: 'id', 'css', 'xpath'.");
+                        locator.getName() + "'. Возможные варианты: 'ID', 'CSS', 'XPATH'.");
         }
 
         // Если количество элементов в результате поиска оказалось равно нулю, значит, элемента с заданным локатором
@@ -96,28 +90,27 @@ public class AbstractPage {
         }
     }
 
-    // Пауза.
-    public void pause() {
-        try {
-            Thread.sleep(PAUSE);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
     // Клик по веб-элементу.
     public void clickElement(WebElement webElement, Locator locator)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        pause();
         if (checkLocator(locator)) webElement.click();
     }
 
     // Ввод текста в поле ввода.
     public void enterText(WebElement webElement, Locator locator, String text)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        pause();
         if (checkLocator(locator)) webElement.sendKeys(text);
     }
 
 
+    // Геттеры.
+    // Геттер объект класса WebDriver.
+    public WebDriver getWebDriver() {
+        return this.webDriver;
+    }
+
+    // Геттер объекта настроек проекта.
+    public Settings getSettings() {
+        return settings;
+    }
 }

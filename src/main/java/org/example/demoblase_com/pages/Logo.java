@@ -5,6 +5,7 @@ import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.abstractions.AbstractPage;
 import org.example.servises.webdriver.Browser;
 import org.example.servises.webdriver.Locator;
+import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -18,7 +19,7 @@ public class Logo extends AbstractPage {
     @FindBy(id = LOGO_LOCATOR)
     WebElement logo;
     // Характеристики главного логотипа сайта.
-    Locator logoLocator = new Locator("Главный логотип сайта", "id", LOGO_LOCATOR);
+    Locator logoLocator = new Locator("Главный логотип сайта", TypeOfLocator.ID, LOGO_LOCATOR);
 
 
     // Конструктор.

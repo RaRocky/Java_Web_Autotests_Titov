@@ -5,6 +5,7 @@ import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
 import org.example.servises.webdriver.Locator;
+import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -18,7 +19,8 @@ public class CategoriesMenu extends AbstractPage {
     @FindBy(xpath = MONITORS_LOCATOR)
     WebElement monitors;
     // Характеристики кнопки 'Monitors' меню категорий товаров.
-    Locator monitorsLocator = new Locator("Кнопка 'Monitors' меню категорий товаров", "xpath", MONITORS_LOCATOR);
+    Locator monitorsLocator =
+            new Locator("Кнопка 'Monitors' меню категорий товаров", TypeOfLocator.XPATH, MONITORS_LOCATOR);
 
 
     // Конструктор.

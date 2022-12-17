@@ -5,6 +5,7 @@ import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.abstractions.AbstractPage;
 import org.example.servises.webdriver.Browser;
 import org.example.servises.webdriver.Locator;
+import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -18,7 +19,7 @@ public class AuthorizationForm extends AbstractPage {
     @FindBy(id = USERNAME_LOCATOR)
     WebElement userName;
     // Характеристики поля ввода имени пользователя.
-    Locator userNameLocator = new Locator("Поле ввода имени пользователя", "id", USERNAME_LOCATOR);
+    Locator userNameLocator = new Locator("Поле ввода имени пользователя", TypeOfLocator.ID, USERNAME_LOCATOR);
 
 
     // Поле ввода пароля.
@@ -28,7 +29,7 @@ public class AuthorizationForm extends AbstractPage {
     @FindBy(id = PASSWORD_LOCATOR)
     WebElement password;
     // Характеристики поля ввода пароля.
-    Locator passwordLocator = new Locator("Поле ввода пароля", "id", PASSWORD_LOCATOR);
+    Locator passwordLocator = new Locator("Поле ввода пароля", TypeOfLocator.ID, PASSWORD_LOCATOR);
 
 
     // Кнопка 'Log in'.
@@ -36,9 +37,9 @@ public class AuthorizationForm extends AbstractPage {
     private final String LOGIN_LOCATOR = "#logInModal .btn-primary";
     // Поиск кнопки 'Log in' при помощи паттерна PageFactory.
     @FindBy(css = LOGIN_LOCATOR)
-    WebElement logIn;
+    WebElement logInButton;
     // Характеристики кнопки "Log in".
-    Locator logInLocator = new Locator("Кнопка 'Log in' формы авторизации", "css", LOGIN_LOCATOR);
+    Locator logInButtonLocator = new Locator("Кнопка 'Log in' формы авторизации", TypeOfLocator.CSS, LOGIN_LOCATOR);
 
 
     // Конструктор.
@@ -46,6 +47,20 @@ public class AuthorizationForm extends AbstractPage {
         super(browser);
     }
 
+
+    // Метод, осуществляющий авторизацию пользователя.
+    public void logIn (String userName, String password)
+            throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        clickUserNameField()
+                .pause()
+                .enterUserName(userName)
+                .pause()
+                .clickPasswordField()
+                .pause()
+                .enterPassword(password)
+                .pause()
+                .clickLogInButton();
+    }
 
     // Клик по полю ввода имени пользователя.
     public AuthorizationForm clickUserNameField()
@@ -76,9 +91,19 @@ public class AuthorizationForm extends AbstractPage {
     }
 
     // Клик по кнопке 'Log in'.
-    public AuthorizationForm clickLogIn()
+    public AuthorizationForm clickLogInButton()
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        clickElement(logIn, logInLocator);
+        clickElement(logInButton, logInButtonLocator);
+        return this;
+    }
+
+    // Пауза.
+    public AuthorizationForm pause() {
+        try {
+            Thread.sleep(getSettings().getPAUSE());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 

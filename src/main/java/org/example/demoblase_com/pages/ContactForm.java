@@ -9,6 +9,7 @@ import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+// Класс объекта формы отправки сообщения 'Contact'.
 public class ContactForm extends AbstractPage {
 
     // Поле ввода 'Contact Email'.

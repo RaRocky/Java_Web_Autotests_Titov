@@ -9,6 +9,7 @@ import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+// Класс объекта страницы товара.
 public class ProductPage extends AbstractPage {
 
     // Кнопка 'Add to cart'.

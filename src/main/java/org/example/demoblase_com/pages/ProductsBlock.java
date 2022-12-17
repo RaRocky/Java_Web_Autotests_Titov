@@ -9,6 +9,7 @@ import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+// Класс объекта блока товаров.
 public class ProductsBlock extends AbstractPage {
 
     // Ссылка на страницу продукта 'ASUS Full HD' в карточке товара.

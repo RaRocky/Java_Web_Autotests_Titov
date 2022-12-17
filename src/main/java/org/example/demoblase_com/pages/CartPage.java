@@ -9,6 +9,7 @@ import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+// Класс объекта страницы корзины товаров.
 public class CartPage extends AbstractPage {
 
     // Кнопка 'Delete' в столбце удаления товара в таблице корзины товаров.

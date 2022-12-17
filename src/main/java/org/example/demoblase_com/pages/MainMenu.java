@@ -9,7 +9,7 @@ import org.example.servises.webdriver.TypeOfLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-// Класс главного меню сайта.
+// Класс объекта главного меню сайта.
 public class MainMenu extends AbstractPage {
 
     // Кнопка 'Contact' главного меню сайта.

@@ -1,5 +1,6 @@
 package org.example.servises;
 
+// Класс, содержащий параметры для настройки проекта.
 public class Settings {
     // Время паузы между действиями в миллмсекундах.
     private final long PAUSE = 100;

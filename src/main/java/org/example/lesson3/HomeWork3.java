@@ -2,6 +2,7 @@ package org.example.lesson3;
 
 import org.example.demoblase_com.testcases.AddProductOnCartAndDeleteTestCase;
 import org.example.demoblase_com.testcases.AuthorizationTestCase;
+import org.example.demoblase_com.testcases.PlaceOrderTestCase;
 import org.example.demoblase_com.testcases.PressLogoTestCase;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
@@ -31,6 +32,9 @@ public class HomeWork3 {
         // Выполнение тест-кейса №3. Добавление товара 'ASUS Full HD' в корзину с последующим удалением.
         addProductOnCartAndDeleteTestCase(browser);
 
+        // Выполнение тест-кейса №4. Оформление заказа.
+        placeOrderTestCase(browser);
+
         // Остановка работы Selenium Web Driver. Закрытие браузера.
         browser.close();
     }
@@ -39,14 +43,14 @@ public class HomeWork3 {
     public static void pressLogoTestCase(Browser browser)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         PressLogoTestCase testCase = new PressLogoTestCase(browser);
-        testCase.doTestCase(testCase.getEXPLICIT_WAIT_TIME());
+        testCase.doTestCase();
     }
 
     // Метод, выполняющий тест-кейс №2. Авторизация пользователя.
     public static void authorizationTestCase(Browser browser)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         AuthorizationTestCase testCase = new AuthorizationTestCase(browser);
-        testCase.doTestCase(testCase.getEXPLICIT_WAIT_TIME());
+        testCase.doTestCase();
 
     }
 
@@ -54,6 +58,13 @@ public class HomeWork3 {
     public static void addProductOnCartAndDeleteTestCase(Browser browser)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         AddProductOnCartAndDeleteTestCase testCase = new AddProductOnCartAndDeleteTestCase(browser);
-        testCase.doTestCase(testCase.getEXPLICIT_WAIT_TIME());
+        testCase.doTestCase();
+    }
+
+    // Метод, выполняющий тест-кейс №4. Оформление заказа.
+    public static void placeOrderTestCase(Browser browser)
+            throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        PlaceOrderTestCase placeOrderTestCase = new PlaceOrderTestCase(browser, "Оформление заказа");
+        placeOrderTestCase.doTestCase();
     }
 }

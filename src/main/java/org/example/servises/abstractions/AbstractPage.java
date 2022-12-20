@@ -102,6 +102,14 @@ public class AbstractPage {
         if (checkLocator(locator)) webElement.sendKeys(text);
     }
 
+    // Получение текста веб-элемента.
+    public String getElementText(WebElement webElement, Locator locator)
+            throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+
+        if (checkLocator(locator)) return webElement.getText();
+        else return null;
+    }
+
 
     // Геттеры.
     // Геттер объект класса WebDriver.

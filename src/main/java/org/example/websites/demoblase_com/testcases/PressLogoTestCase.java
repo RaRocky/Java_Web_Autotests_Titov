@@ -1,4 +1,4 @@
-package org.example.demoblase_com.testcases;
+package org.example.websites.demoblase_com.testcases;
 
 import org.example.servises.abstractions.AbstractTestCase;
 import org.example.servises.exceptions.WrongPathOfLocatorException;

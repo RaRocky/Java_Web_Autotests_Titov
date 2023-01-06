@@ -1,6 +1,6 @@
 package org.example.lesson4;
 
-import org.example.AbstractTest;
+import org.example.abstractions.AbstractTest;
 import org.example.lesson4.exceptions.CanNotBeTriangleException;
 import org.example.lesson4.exceptions.LengthIsNegativeException;
 import org.example.lesson4.exceptions.SideEqualZeroException;

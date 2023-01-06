@@ -1,8 +1,9 @@
-package org.example;
+package org.example.abstractions;
 
 import org.example.servises.webdriver.Browser;
 import org.example.servises.webdriver.BrowserName;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 
 public class AbstractTest {
@@ -12,6 +13,11 @@ public class AbstractTest {
     @BeforeAll
     public static void setBrowser() {
         browser = new Browser(BrowserName.CHROME);
+    }
+
+    @AfterEach
+    public void deleteCookie () {
+        browser.getWebDriver().manage().deleteAllCookies();
     }
 
     @AfterAll

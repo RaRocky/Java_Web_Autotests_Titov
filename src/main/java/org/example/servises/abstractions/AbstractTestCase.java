@@ -4,30 +4,33 @@ import org.example.servises.Settings;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
-import org.example.servises.webdriver.Locator;
 import org.example.servises.webdriver.TypeOfLocator;
 import org.example.servises.webdriver.cookie.MyCookie;
 import org.example.websites.calculat_ru.SquareOfTriangleByThreeSidesPage;
 import org.example.websites.demoblase_com.pages.*;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 
 // Класс абстрактного тест кейса. Содержит общие методы для всех тест кейсов.
 public class AbstractTestCase {
 
+    static Logger logger = LoggerFactory.getLogger(AbstractPage.class);
+
     // Объект настроек проекта
     private Settings settings;
     // Заголовок тест-кейса.
-    private String testCaseName;
+    private final String testCaseName;
     // Объект класса Browser для управления браузером при помощи Selenium Web Driver.
     private final Browser browser;
     // Объект JavascriptExecutor для управления страницей сайта при помощи JS скриптов.
-    private JavascriptExecutor javascriptExecutor;
+    private final JavascriptExecutor javascriptExecutor;
     // Объект окна 'About Us'.
     private AboutUsWindow aboutUsWindow;
     // Объект формы авторизации пользователя.
@@ -73,36 +76,71 @@ public class AbstractTestCase {
 
 
     // Методы класса.
+    // Уведомление о начале выполнения тест-кейса.
+    public AbstractTestCase startTestCase() {
+        logger.info("================================================================================================");
+        logger.info("Тест-кейс: " + getTestCaseName() + ".");
+        logger.info("------------------------------------------------------------------------------------------------");
+        return this;
+    }
+
     // Метод, выполняющий все шаги тест-кейса.
     public void doTestCase() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        precondition1();
-        pause();
-        waitOfPrecondition1();
-        precondition2();
-        pause();
-        waitOfPrecondition2();
-        step1();
-        pause();
-        waitOfStep1();
-        step2();
-        pause();
-        waitOfStep2();
-        step3();
-        pause();
-        waitOfStep3();
-        step4();
-        pause();
-        waitOfStep4();
-        step5();
-        pause();
-        waitOfStep5();
-        step6();
-        pause();
-        waitOfStep6();
-        step7();
-        pause();
-        waitOfStep7();
-        testPassedSuccessfully();
+        startTestCase()
+                .precondition1()
+                .waitOfPrecondition1()
+                .checkOfPrecondition1()
+                .pause()
+
+                .precondition2()
+                .waitOfPrecondition2()
+                .checkOfPrecondition2()
+                .pause()
+
+                .step1()
+                .waitOfStep1()
+                .checkOfStep1()
+                .pause()
+
+                .step2()
+                .waitOfStep2()
+                .checkOfStep2()
+                .pause()
+
+
+                .step3()
+                .waitOfStep3()
+                .checkOfStep3()
+                .pause()
+
+                .step4()
+                .waitOfStep4()
+                .checkOfStep4()
+                .pause()
+
+                .step5()
+                .waitOfStep5()
+                .checkOfStep5()
+                .pause()
+
+                .step6()
+                .waitOfStep6()
+                .checkOfStep6()
+                .pause()
+
+                .step7()
+                .waitOfStep7()
+                .checkOfStep7()
+                .pause()
+
+                .testPassedSuccessfully();
+    }
+
+    // Уведомление об успешном прохождении тест-кейса.
+    public void testPassedSuccessfully() {
+        logger.info("------------------------------------------------------------------------------------------------");
+        logger.info("Тест-кейс '" + getTestCaseName() + "' успешно завершен.");
+        logger.info("================================================================================================");
     }
 
     // Прокручивание страницы на необходимое количество пикселей.
@@ -120,22 +158,6 @@ public class AbstractTestCase {
         MyCookie cookie = new MyCookie(getBrowser());
         cookie.addCookiesFromFile(filePath);
         getBrowser().getWebDriver().navigate().refresh();
-    }
-
-    // Пауза.
-    public void pause() {
-        try {
-            Thread.sleep(settings.getPAUSE());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // Уведомление об успешном прохождении тест-кейса.
-    public void testPassedSuccessfully() {
-        System.out.println("-----------------------------------------------------------------------------------------");
-        System.out.println("Тест-кейс '" + getTestCaseName() + "' успешно завершен.");
-        System.out.println("-----------------------------------------------------------------------------------------");
     }
 
 
@@ -171,7 +193,6 @@ public class AbstractTestCase {
             default:
                 break;
         }
-
     }
 
     // Метод, реализующий явное ожидание до того, как указанный веб-элемент станет невидимым.
@@ -198,12 +219,11 @@ public class AbstractTestCase {
             default:
                 break;
         }
-
     }
 
     // Метод, реализующий явное ожидание появления в DOM-структуре элемента, содержащего указанный текст.
     public void explicitWaitOfTextContainsInElementLocated(TypeOfLocator typeOfLocator, String pathOfLocator, String text) {
-        switch (typeOfLocator)  {
+        switch (typeOfLocator) {
             case ID:
                 new WebDriverWait(getBrowser().getWebDriver(),
                         Duration.ofSeconds(getEXPLICIT_WAIT_TIME()))
@@ -231,7 +251,6 @@ public class AbstractTestCase {
             default:
                 break;
         }
-
     }
 
     // Метод, реализующий явное ожидание до того, как на странице появится алерт.
@@ -240,95 +259,201 @@ public class AbstractTestCase {
                 Duration.ofSeconds(getEXPLICIT_WAIT_TIME())).until(ExpectedConditions.alertIsPresent());
     }
 
-    // Этапы выполнения тест-кейса.
-    // Предусловие №1.
-    public void precondition1() {
 
+    // Ассерты.
+    // Ассерт, проверяющий переход на страницу с указанным URL.
+    public void assertOfUrlContains(String url) {
+        Assertions.assertEquals(url, getBrowser().getWebDriver().getCurrentUrl(),
+                "Не удалось перейти на страницу с URL: " + url);
+    }
+
+    // Ассерт, проверяющий текст вчплывающего уведомления.
+    public void assertOfAlertText(String alertText) {
+        Assertions.assertEquals(alertText, getBrowser().getWebDriver().switchTo().alert().getText());
+    }
+
+    // Ассерт, проверяющий текст веб-элемента.
+    public void assertOfWebElementText(TypeOfLocator typeOfLocator, String pathOfLocator, String webElementText) {
+        switch (typeOfLocator) {
+            case ID:
+                Assertions.assertEquals(webElementText, getBrowser()
+                        .getWebDriver()
+                        .findElement(By.id(pathOfLocator))
+                        .getText());
+                break;
+
+            case CSS:
+                Assertions.assertEquals(webElementText, getBrowser()
+                        .getWebDriver()
+                        .findElement(By.cssSelector(pathOfLocator))
+                        .getText());
+                break;
+
+            case XPATH:
+                Assertions.assertEquals(webElementText, getBrowser()
+                        .getWebDriver()
+                        .findElement(By.xpath(pathOfLocator))
+                        .getText());
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    // Этапы выполнения тест-кейса.
+    // Пауза.
+    public AbstractTestCase pause() {
+        try {
+            Thread.sleep(settings.getPAUSE());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return this;
+    }
+
+
+    // Предусловие №1.
+    public AbstractTestCase precondition1() {
+        return this;
     }
 
     // Ожидание выполнения предусловия №1.
-    public void waitOfPrecondition1() {
-
+    public AbstractTestCase waitOfPrecondition1() {
+        return this;
     }
 
-    // Предусловие №2.
-    public void precondition2() {
+    // Проверка выполнения предусловия №1.
+    public AbstractTestCase checkOfPrecondition1() {
+        return this;
+    }
 
+
+    // Предусловие №2.
+    public AbstractTestCase precondition2() {
+        return this;
     }
 
     // Ожидание выполнения предусловия №2.
-    public void waitOfPrecondition2() {
-
+    public AbstractTestCase waitOfPrecondition2() {
+        return this;
     }
 
-    // Шаг №1.
-    public void step1() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    // Проверка выполнения предусловия №2.
+    public AbstractTestCase checkOfPrecondition2() {
+        return this;
+    }
 
+
+    // Шаг №1.
+    public AbstractTestCase step1() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        return this;
     }
 
     // Ожидание выполнения шага №1.
-    public void waitOfStep1() {
-
+    public AbstractTestCase waitOfStep1() {
+        return this;
     }
 
-    // Шаг №2.
-    public void step2() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    // Проверка выполнения шага №2.
+    public AbstractTestCase checkOfStep1() {
+        return this;
+    }
 
+
+    // Шаг №2.
+    public AbstractTestCase step2() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        return this;
     }
 
     // Ожидание выполнения шага №2.
-    public void waitOfStep2() {
-
+    public AbstractTestCase waitOfStep2() {
+        return this;
     }
 
-    // Шаг №3.
-    public void step3() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    // Проверка выполнения шага №2.
+    public AbstractTestCase checkOfStep2() {
+        return this;
+    }
 
+
+    // Шаг №3.
+    public AbstractTestCase step3() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        return this;
     }
 
     // Ожидание выполнения шага №3.
-    public void waitOfStep3() {
-
+    public AbstractTestCase waitOfStep3() {
+        return this;
     }
 
-    // Шаг №4.
-    public void step4() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    // Проверка выполнения шага №3.
+    public AbstractTestCase checkOfStep3() {
+        return this;
+    }
 
+
+    // Шаг №4.
+    public AbstractTestCase step4() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        return this;
     }
 
     // Ожидание выполнения шага №4.
-    public void waitOfStep4() {
-
+    public AbstractTestCase waitOfStep4() {
+        return this;
     }
 
-    // Шаг №5.
-    public void step5() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    // Проверка выполнения шага №4.
+    public AbstractTestCase checkOfStep4() {
+        return this;
+    }
 
+
+    // Шаг №5.
+    public AbstractTestCase step5() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        return this;
     }
 
     // Ожидание выполнения шага №5.
-    public void waitOfStep5() {
-
+    public AbstractTestCase waitOfStep5() {
+        return this;
     }
 
-    // Шаг №6.
-    public void step6() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    // Проверка выполнения шага №5.
+    public AbstractTestCase checkOfStep5() {
+        return this;
+    }
 
+
+    // Шаг №6.
+    public AbstractTestCase step6() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        return this;
     }
 
     // Ожидание выполнения шага №6.
-    public void waitOfStep6() {
-
+    public AbstractTestCase waitOfStep6() {
+        return this;
     }
 
-    // Шаг №7.
-    public void step7() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    // Проверка выполнения шага №6.
+    public AbstractTestCase checkOfStep6() {
+        return this;
+    }
 
+
+    // Шаг №7.
+    public AbstractTestCase step7() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+        return this;
     }
 
     // Ожидание выполнения шага №7.
-    public void waitOfStep7() {
+    public AbstractTestCase waitOfStep7() {
+        return this;
+    }
 
+    // Проверка выполнения шага №7.
+    public AbstractTestCase checkOfStep7() {
+        return this;
     }
 
 

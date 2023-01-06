@@ -16,25 +16,44 @@ public class PressLogoTestCase extends AbstractTestCase {
 
     // Предусловие. Открывается страница сайта, отличная от главной.
     @Override
-    public void precondition1() {
+    public AbstractTestCase precondition1() {
         getBrowser().goToUrl("https://www.demoblaze.com/prod.html?idp_=5");
+        return super.precondition1();
     }
 
     // Ожидание выполнения предусловия.
     @Override
-    public void waitOfPrecondition1() {
+    public AbstractTestCase waitOfPrecondition1() {
         explicitWaitOfUrlContains("https://www.demoblaze.com/prod.html?idp_=5");
+        return super.waitOfPrecondition1();
     }
+
+    // Проверка выполнения предусловия.
+    @Override
+    public AbstractTestCase checkOfPrecondition1() {
+        assertOfUrlContains("https://www.demoblaze.com/prod.html?idp_=5");
+        return super.checkOfPrecondition1();
+    }
+
 
     // Шаг №1. Клик по главному логотипу сайта.
     @Override
-    public void step1() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public AbstractTestCase step1() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         getLogo().clickLogo();
+        return super.step1();
     }
 
     // Ожидание выполнения Шага №1.
     @Override
-    public void waitOfStep1() {
+    public AbstractTestCase waitOfStep1() {
         explicitWaitOfUrlContains("https://www.demoblaze.com/index.html");
+        return super.waitOfStep1();
+    }
+
+    // Проверка выполнения шага №1.
+    @Override
+    public AbstractTestCase checkOfStep1() {
+        assertOfUrlContains("https://www.demoblaze.com/index.html");
+        return super.checkOfStep1();
     }
 }

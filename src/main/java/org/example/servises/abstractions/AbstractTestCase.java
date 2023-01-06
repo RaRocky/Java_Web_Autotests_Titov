@@ -1,14 +1,17 @@
 package org.example.servises.abstractions;
 
-import org.example.demoblase_com.pages.*;
 import org.example.servises.Settings;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
+import org.example.servises.webdriver.Locator;
 import org.example.servises.webdriver.TypeOfLocator;
 import org.example.servises.webdriver.cookie.MyCookie;
+import org.example.websites.calculat_ru.SquareOfTriangleByThreeSidesPage;
+import org.example.websites.demoblase_com.pages.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -45,6 +48,8 @@ public class AbstractTestCase {
     private ProductPage asusFullHdMonitorPage;
     // Объект блока товаров.
     private ProductsBlock productsBlock;
+    // Объект страницы рассчета площади треугольника сайта calculat.ru
+    private SquareOfTriangleByThreeSidesPage squareOfTriangleByThreeSidesPage;
 
 
     // Конструктор.
@@ -63,6 +68,7 @@ public class AbstractTestCase {
         setPlaceOrderForm(browser);
         setProductPage(browser);
         setProductsBlock(browser);
+        setSquareOfTriangleByThreeSidesPage(browser);
     }
 
 
@@ -402,6 +408,11 @@ public class AbstractTestCase {
         return productsBlock;
     }
 
+    // Геттер объекта страницы рассчета площади треугольника по трем сторонам сайта calculat.ru.
+    public SquareOfTriangleByThreeSidesPage getSquareOfTriangleByThreeSidesPage() {
+        return squareOfTriangleByThreeSidesPage;
+    }
+
 
     // Сеттеры.
     // Сеттер объекта настроек проекта.
@@ -457,5 +468,10 @@ public class AbstractTestCase {
     // Сеттер объекта блока товаров.
     public void setProductsBlock(Browser browser) {
         this.productsBlock = new ProductsBlock(browser);
+    }
+
+    // Сеттер объекта страницы рассчета площади треугольника по трем сторонам сайта calculat.ru.
+    public void setSquareOfTriangleByThreeSidesPage(Browser browser) {
+        this.squareOfTriangleByThreeSidesPage = new SquareOfTriangleByThreeSidesPage(browser);
     }
 }

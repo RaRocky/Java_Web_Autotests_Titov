@@ -1,9 +1,9 @@
 package org.example.servises;
 
-import org.example.demoblase_com.testcases.*;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
 import org.example.servises.webdriver.Browser;
+import org.example.websites.demoblase_com.testcases.*;
 
 // Класс, содержащий методы реализации тест-кейсов.
 public class DoTestCase {

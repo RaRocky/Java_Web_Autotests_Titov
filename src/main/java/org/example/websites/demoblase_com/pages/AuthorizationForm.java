@@ -39,7 +39,8 @@ public class AuthorizationForm extends AbstractPage {
     @FindBy(css = LOGIN_LOCATOR)
     WebElement logInButton;
     // Характеристики кнопки "Log in".
-    Locator logInButtonLocator = new Locator("Кнопка 'Log in' формы авторизации", TypeOfLocator.CSS, LOGIN_LOCATOR);
+    Locator logInButtonLocator =
+            new Locator("Кнопка 'Log in' формы авторизации", TypeOfLocator.CSS, LOGIN_LOCATOR);
 
 
     // Конструктор.
@@ -72,7 +73,7 @@ public class AuthorizationForm extends AbstractPage {
     // Ввод имени пользователя.
     public AuthorizationForm enterUserName(String nameOfUser)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        enterText(userName, userNameLocator, "Bob Smith");
+        enterText(userName, userNameLocator, nameOfUser);
         return this;
     }
 
@@ -86,7 +87,7 @@ public class AuthorizationForm extends AbstractPage {
     // Ввод пароля.
     public AuthorizationForm enterPassword(String passwd)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
-        enterText(password, passwordLocator, "Enter000");
+        enterText(password, passwordLocator, passwd);
         return this;
     }
 

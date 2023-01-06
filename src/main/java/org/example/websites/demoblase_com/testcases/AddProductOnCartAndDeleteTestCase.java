@@ -17,91 +17,148 @@ public class AddProductOnCartAndDeleteTestCase extends AbstractTestCase {
 
     // Предусловие №1. Переход на главную страницу сайта.
     @Override
-    public void precondition1() {
+    public AbstractTestCase precondition1() {
         getBrowser().goToUrl("https://www.demoblaze.com/index.html");
+        return super.precondition1();
     }
 
     // Ожидание выполнения предусловия №1.
     @Override
-    public void waitOfPrecondition1() {
+    public AbstractTestCase waitOfPrecondition1() {
         explicitWaitOfUrlContains("https://www.demoblaze.com/index.html");
+        return super.waitOfPrecondition1();
     }
+
+    // Проверка выполнения предусловия №1.
+    @Override
+    public AbstractTestCase checkOfPrecondition1() {
+        assertOfUrlContains("https://www.demoblaze.com/index.html");
+        return super.checkOfPrecondition1();
+    }
+
 
     // Предусловие №2. Добавление cookie с авторизованным пользователем.
     @Override
-    public void precondition2() {
-        addCookie("./src/main/java/org/example/demoblase_com/cookies/Authorization_Cookie.data");
+    public AbstractTestCase precondition2() {
+        addCookie(getSettings().getDEMOBLASE_COOKIE_PATH());
+        return super.precondition2();
     }
 
     // Ожидание выполнения предусловия №2.
     @Override
-    public void waitOfPrecondition2() {
+    public AbstractTestCase waitOfPrecondition2() {
         explicitWaitOfVisibilityOfElementLocated(TypeOfLocator.ID, "nameofuser");
+        return super.waitOfPrecondition2();
     }
+
 
     // Шаг№1. Переход на страницу категории 'Monitors'.
     @Override
-    public void step1() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public AbstractTestCase step1() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         getCategoriesMenu().clickMonitors();
+        return super.step1();
     }
 
     // Ожидание выполнения шага №1.
     @Override
-    public void waitOfStep1() {
+    public AbstractTestCase waitOfStep1() {
         explicitWaitOfUrlContains("https://www.demoblaze.com/index.html#");
+        return super.waitOfStep1();
     }
+
+    // Проверка выполнения шага №1.
+    @Override
+    public AbstractTestCase checkOfStep1() {
+        assertOfUrlContains("https://www.demoblaze.com/index.html#");
+        return super.checkOfStep1();
+    }
+
 
     // Шаг№2. Переход на страницу товара 'ASUS Full HD'.
     @Override
-    public void step2() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public AbstractTestCase step2() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         getProductsBlock().clickAsusFullHd();
+        return super.step2();
     }
 
     // Ожидание выполнения шага №2.
     @Override
-    public void waitOfStep2() {
+    public AbstractTestCase waitOfStep2() {
         explicitWaitOfUrlContains("https://www.demoblaze.com/prod.html?idp_=14");
+        return super.waitOfStep2();
     }
+
+    // Проверка выполнения шага №2.
+    @Override
+    public AbstractTestCase checkOfStep2() {
+        assertOfUrlContains("https://www.demoblaze.com/prod.html?idp_=14");
+        return super.checkOfStep2();
+    }
+
 
     // Шаг№3. Нажатие на кнопку 'Add to cart'.
     @Override
-    public void step3() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public AbstractTestCase step3() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         getProductPage().clickAddToCartButton();
+        return super.step3();
     }
 
     // Ожидание выполнения шага №3.
     @Override
-    public void waitOfStep3() {
+    public AbstractTestCase waitOfStep3() {
         explicitWaitOfAlertIsPresent();
+        return super.waitOfStep3();
     }
+
+    // Проверка выполнения шага №3.
+    @Override
+    public AbstractTestCase checkOfStep3() {
+        assertOfAlertText("Product added.");
+        return super.checkOfStep3();
+    }
+
 
     // Шаг№4. Подтверждение действия на странице.
     @Override
-    public void step4() {
+    public AbstractTestCase step4() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         acceptAlert();
+        return super.step4();
     }
+
 
     // Шаг№5. Переход в раздел 'Cart' главного меню сайта.
     @Override
-    public void step5() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public AbstractTestCase step5() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         getMainMenu().clickCart();
+        return super.step5();
     }
 
     // Ожидание выполнения шага №5.
     @Override
-    public void waitOfStep5() {
+    public AbstractTestCase waitOfStep5() {
         explicitWaitOfUrlContains("https://www.demoblaze.com/cart.html");
+        return super.waitOfStep5();
     }
+
+    // Проверка выполнения шага №5.
+    @Override
+    public AbstractTestCase checkOfStep5() {
+        assertOfUrlContains("https://www.demoblaze.com/cart.html");
+        return super.checkOfStep5();
+    }
+
 
     // Шаг №6. Нажатие на кнопку Delete. Удаление товара из корзины.
     @Override
-    public void step6() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public AbstractTestCase step6() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         getCartPage().clickDelete();
+        return super.step6();
     }
 
     // Ожидание выполнения шага №6.
     @Override
-    public void waitOfStep6() {
-        explicitWaitOfInvisibilityOfElementLocated(TypeOfLocator.ID, "tbodyid");
+    public AbstractTestCase waitOfStep6() {
+        explicitWaitOfInvisibilityOfElementLocated(TypeOfLocator.CSS, "#tbodyid > tr");
+        return super.waitOfStep6();
     }
 }

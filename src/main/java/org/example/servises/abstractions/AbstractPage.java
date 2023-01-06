@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
     /*// Шаблон.
     // Локатор.
@@ -22,6 +24,8 @@ import org.openqa.selenium.support.PageFactory;
 
 // Класс абстрактной страницы сайта. Содержит основные методы взаимодействия с веб-элементами сайта.
 public class AbstractPage {
+
+    static Logger logger = LoggerFactory.getLogger(AbstractPage.class);
 
     // Объект класса WebDriver.
     private final WebDriver webDriver;
@@ -43,6 +47,8 @@ public class AbstractPage {
     public boolean checkLocator(Locator locator)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
 
+        String message;
+
         // Целочисленная переменная для подсчета количества элементов в DOM-структуре, имеющих заданный локатор.
         int countOfElements;
 
@@ -62,30 +68,38 @@ public class AbstractPage {
                 break;
 
             default:
-                throw new WrongTypeOfLocatorException("Неверно указан тип локатора для элемента '" +
-                        locator.getName() + "'. Возможные варианты: 'ID', 'CSS', 'XPATH'.");
+                message = "Неверно указан тип локатора для элемента '" +
+                        locator.getName() + "'. Возможные варианты: 'ID', 'CSS', 'XPATH'.";
+                logger.error(message);
+                throw new WrongTypeOfLocatorException(message);
         }
 
         // Если количество элементов в результате поиска оказалось равно нулю, значит, элемента с заданным локатором
         // нет в DOM-структуре открытой страницы сайта. Либо локатор задан с ошибкой.
+
         if (countOfElements == 0) {
             /*MyUtils.makeScreenshot(driver,
                     "FAILURE- org.example.lesson7.Lesson7Test" + System.currentTimeMillis() + ".png");*/
-            throw new WrongPathOfLocatorException("Элемент '" + locator.getName() +
-                    "' не доступен на странице (смотри скриншот). Либо ошибка в написании локатора.");
+            message = "Элемент '" + locator.getName() +
+                    "' не доступен на странице (смотри скриншот). Либо ошибка в написании локатора.";
+            logger.error(message);
+            throw new WrongPathOfLocatorException(message);
         }
 
         // Если поиск элементов показал, что таковых найдено больше 1, это значит, что заданный локатор не уникален.
         if (countOfElements > 1) {
-            throw new WrongPathOfLocatorException("Элемент '" + locator.getName() +
+            message = "Элемент '" + locator.getName() +
                     "' с локатором '" + locator.getType() + " = " + locator.getPath() +
-                    "' - не уникальный. Задайте другой локатор.");
+                    "' - не уникальный. Задайте другой локатор.";
+            logger.error(message);
+            throw new WrongPathOfLocatorException(message);
         }
 
         // Положительный результат проверки локатора на наличе в DOM-структуре и уникальность.
         else {
-            System.out.println("Элемент '" + locator.getName() + "' с локатором '" + locator.getType() + " = " +
-                    locator.getPath() + "' успешно найден, является уникальным.");
+            message = "Элемент '" + locator.getName() + "' с локатором '" + locator.getType() + " = " +
+                    locator.getPath() + "' успешно найден, является уникальным.";
+            logger.info(message);
             return true;
         }
     }

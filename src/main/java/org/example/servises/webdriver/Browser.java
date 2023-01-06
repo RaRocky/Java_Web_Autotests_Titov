@@ -58,6 +58,6 @@ public class Browser {
 
     // Закрыть браузер. Завершить работу Web Driver.
     public void close () {
-        webDriver.close();
+        webDriver.quit();
     }
 }

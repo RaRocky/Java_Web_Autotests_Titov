@@ -1,0 +1,1 @@
+{"uuid":"c5769ae8-deeb-423d-bda8-8eb285ea4b48","name":"Оформление заказа. Все поля заполнены.","children":["87b9776c-2e90-44e7-894a-82f756f867f8"],"befores":[],"afters":[{"name":"deleteCookie","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1673631633359,"stop":1673631633365}],"start":1673631626944,"stop":1673631633366}

@@ -4,26 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 4. DONE!">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/demoblase_tests/DemoblaseTest.java" afterDir="false" />
+    <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Home Work 5 &amp; 6. DONE!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lesson3/HomeWork3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/DoTestCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/webdriver/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/webdriver/Browser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/websites/calculat_ru/SquareOfTriangleByThreeSidesTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/websites/calculat_ru/SquareOfTriangleByThreeSidesTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/cookies/Authorization_Cookie.data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/cookies/Authorization_Cookie.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/pages/AuthorizationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/pages/AuthorizationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/AddProductOnCartAndDeleteTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/AuthorizationTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/AuthorizationTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/PlaceOrderTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/PlaceOrderTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/PlayAboutUsVideoTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/PlayAboutUsVideoTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/PressLogoTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/PressLogoTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/SendContactMessageTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/SendContactMessageTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/abstractions/AbstractTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/lesson4/TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/lesson4/TriangleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +64,7 @@
       <recent name="org.example.lesson3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HomeWork3">
+  <component name="RunManager" selected="JUnit.DemoblaseTest">
     <configuration name="HomeWork3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.lesson3.HomeWork3" />
       <module name="Java_Web_Autotests_Titov" />
@@ -109,7 +93,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoblaseTest.addProductOnCartAndDeleteTestCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DemoblaseTest.addProductOnCartAndDeleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java_Web_Autotests_Titov" />
       <extension name="coverage">
         <pattern>
@@ -117,25 +101,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.testcasestests" />
+      <option name="PACKAGE_NAME" value="org.example.demoblase_tests" />
       <option name="MAIN_CLASS_NAME" value="org.example.demoblase_tests.DemoblaseTest" />
-      <option name="METHOD_NAME" value="addProductOnCartAndDeleteTestCaseTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DemoblaseTest.authorizationPositiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Java_Web_Autotests_Titov" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.demoblase_tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.testcasestests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.demoblase_tests.DemoblaseTest" />
-      <option name="METHOD_NAME" value="authorizationPositiveTest" />
+      <option name="METHOD_NAME" value="addProductOnCartAndDeleteTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,13 +124,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TriangleTest.positiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java_Web_Autotests_Titov" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.lesson4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.lesson4" />
+      <option name="MAIN_CLASS_NAME" value="org.example.lesson4.TriangleTest" />
+      <option name="METHOD_NAME" value="positiveTest(int,int,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HomeWork3" />
         <item itemvalue="JUnit.DemoblaseTest" />
-        <item itemvalue="JUnit.DemoblaseTest.authorizationPositiveTest" />
-        <item itemvalue="JUnit.DemoblaseTest.addProductOnCartAndDeleteTestCaseTest" />
         <item itemvalue="JUnit.TriangleTest" />
+        <item itemvalue="JUnit.DemoblaseTest.addProductOnCartAndDeleteTest" />
+        <item itemvalue="JUnit.TriangleTest.positiveTest" />
+        <item itemvalue="Application.HomeWork3" />
       </list>
     </recent_temporary>
   </component>
@@ -399,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671536301484</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Home Work 5 &amp; 6. DONE!">
+      <created>1673018718872</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1673018718872</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -446,7 +437,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Создан Enum BrowserName." />
     <MESSAGE value="Класс App переименован в DemoApp." />
     <MESSAGE value="Класс AppTest переименован в DemoAppTest." />
     <MESSAGE value="Создан класс HomeWork3." />
@@ -471,6 +461,7 @@
     <MESSAGE value="Home Work 3. Создание в классе AbstractTestCase метода, реализующего явное ожидание появления веб-элемента, содержащего указанный текст." />
     <MESSAGE value="Home Work 3. DONE!" />
     <MESSAGE value="Home Work 4. DONE!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Home Work 4. DONE!" />
+    <MESSAGE value="Home Work 5 &amp; 6. DONE!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Work 5 &amp; 6. DONE!" />
   </component>
 </project>

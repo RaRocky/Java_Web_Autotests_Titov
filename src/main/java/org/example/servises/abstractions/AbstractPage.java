@@ -1,5 +1,6 @@
 package org.example.servises.abstractions;
 
+import org.example.servises.MyUtils;
 import org.example.servises.Settings;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;
@@ -78,8 +79,8 @@ public class AbstractPage {
         // нет в DOM-структуре открытой страницы сайта. Либо локатор задан с ошибкой.
 
         if (countOfElements == 0) {
-            /*MyUtils.makeScreenshot(driver,
-                    "FAILURE- org.example.lesson7.Lesson7Test" + System.currentTimeMillis() + ".png");*/
+            MyUtils.makeScreenshot(getWebDriver(),
+                    "FAILURE- org.example.demoblase_tests.DemoblaseTest" + System.currentTimeMillis() + ".png");
             message = "Элемент '" + locator.getName() +
                     "' не доступен на странице (смотри скриншот). Либо ошибка в написании локатора.";
             logger.error(message);

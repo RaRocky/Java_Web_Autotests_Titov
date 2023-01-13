@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14ec6763-df44-4674-82b9-b33c98632f83" name="Changes" comment="Добавление Allure.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/MyUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/0085bd73-d16f-4087-8f70-ff7268451a71-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/20271f11-a218-4d02-89db-b48ad6d0501f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/4fe2fe53-a8c9-47c2-96f3-195554cec0c0-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/66e8bdcd-f202-4a98-8586-1aa4085a620a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/6faf9781-8813-406a-a26e-cecd4614b933-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/85f623ca-0401-4130-8f3a-f6868b9e343a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/9eea0433-a805-4aad-9d0f-8061411a35eb-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/allure.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/c20c9cb4-13c4-4cb6-af21-6361015196ec-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/d0f091c9-35f2-4607-9ca3-66817464a1b0-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/dd81804b-7f33-403d-bd38-0b11abe6f5fd-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/executor.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/f4292f87-4a6c-4c37-8f9f-d195806b0dd0-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/f807d528-f244-43a0-a1f1-0ea7657fe736-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/f8a59267-e769-43dc-8491-4afd1e9e8dc3-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servises/abstractions/AbstractTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/pages/Logo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/pages/Logo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/PressLogoTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/websites/demoblase_com/testcases/PressLogoTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/abstractions/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/abstractions/AbstractTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/demoblase_tests/DemoblaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/demoblase_tests/DemoblaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -429,7 +406,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673609713244</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Добавление Allure.">
+      <created>1673635290540</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1673635290540</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Добавление Allure.">
+      <created>1673635317970</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1673635317970</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

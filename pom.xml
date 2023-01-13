@@ -42,7 +42,7 @@
         <!-- Версия библиотеки логирования -->
         <logback.version>1.4.5</logback.version>
         <!-- Версия aspectj -->
-        <aspectj.version>1.9.2</aspectj.version>
+        <aspectj.version>1.8.13</aspectj.version>
         <!-- Версия allure java-commons -->
         <allure-java-commons.version>2.20.0</allure-java-commons.version>
         <!-- Версия allure Junit5 -->

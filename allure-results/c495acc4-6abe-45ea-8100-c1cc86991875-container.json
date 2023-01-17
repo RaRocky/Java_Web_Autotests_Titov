@@ -1,0 +1,1 @@
+{"uuid":"c495acc4-6abe-45ea-8100-c1cc86991875","name":"Создание скриншота.","children":["7e370d2d-28bc-446d-a554-2acebeca1889"],"befores":[],"afters":[{"name":"deleteCookie","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1673957828795,"stop":1673957828801}],"start":1673957822805,"stop":1673957828801}

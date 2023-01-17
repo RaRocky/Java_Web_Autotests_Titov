@@ -32,7 +32,7 @@ public class SquareOfTriangleByThreeSidesTestCase extends AbstractTestCase {
 
 
     // Метод, реализующий получение значения площади треугольника с сайта calculat.ru.
-    public String getTriangleSquare (String sideA, String sideB, String sideC)
+    public String getTriangleSquare(String sideA, String sideB, String sideC)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         doTestCase();
         return getSquareOfTriangleByThreeSidesPage().getResultOfSquare(sideA, sideB, sideC);

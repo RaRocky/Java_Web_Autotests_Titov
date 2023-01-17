@@ -114,7 +114,7 @@ public class SquareOfTriangleByThreeSidesPage extends AbstractPage {
     }
 
     // Получение результата расчета площади треугольника.
-    public String getResultOfSquare (String sideA, String sideB, String sideC)
+    public String getResultOfSquare(String sideA, String sideB, String sideC)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         clickSideAField()
                 .enterSideAField(sideA)
@@ -123,6 +123,6 @@ public class SquareOfTriangleByThreeSidesPage extends AbstractPage {
                 .clickSideCField()
                 .enterSideCField(sideC)
                 .clickCountButton();
-       return getElementText(squareResult, squareResultLocator);
+        return getElementText(squareResult, squareResultLocator);
     }
 }

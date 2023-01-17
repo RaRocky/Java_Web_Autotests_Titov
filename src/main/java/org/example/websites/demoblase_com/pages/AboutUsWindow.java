@@ -44,7 +44,7 @@ public class AboutUsWindow extends AbstractPage {
     }
 
     // Клик по кнопке 'Close'.
-    public AboutUsWindow clickCloseButton () throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public AboutUsWindow clickCloseButton() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         clickElement(closeButton, closeButtonLocator);
         return this;
     }

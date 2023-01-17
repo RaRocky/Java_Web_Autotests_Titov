@@ -1,0 +1,1 @@
+{"uuid":"297d65c9-ed77-43d9-b2fd-9121ad35a291","name":"Авторизация пользователя. Позитивный тест.","children":["689ff2ef-ec3e-4169-8cc0-b08abf7a9b42"],"befores":[],"afters":[{"name":"deleteCookie","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1673957840898,"stop":1673957840919}],"start":1673957836701,"stop":1673957840925}

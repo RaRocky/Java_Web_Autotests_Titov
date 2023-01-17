@@ -1,1 +1,0 @@
-{"uuid":"83946d49-87c6-4fbd-b575-b4c52da70cf9","name":"Клик по главному логотипу сайта","children":["4621cffe-89f6-4136-9074-67cde6dc43ad"],"befores":[],"afters":[{"name":"deleteCookie","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1673631776908,"stop":1673631776913}],"start":1673631775118,"stop":1673631776914}

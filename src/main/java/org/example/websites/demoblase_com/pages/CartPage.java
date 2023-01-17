@@ -45,7 +45,7 @@ public class CartPage extends AbstractPage {
     }
 
     // Клик по кнопке 'Place order'.
-    public CartPage clickPlaceOrderButton () throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public CartPage clickPlaceOrderButton() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         clickElement(placeOrderButton, placeOrderButtonLocator);
         return this;
     }

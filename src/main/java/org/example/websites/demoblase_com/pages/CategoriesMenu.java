@@ -30,7 +30,7 @@ public class CategoriesMenu extends AbstractPage {
 
 
     // Клик по кнопке 'Monitors' меню категорий товаров.
-    public CategoriesMenu clickMonitors () throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public CategoriesMenu clickMonitors() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         clickElement(monitors, monitorsLocator);
         return this;
     }

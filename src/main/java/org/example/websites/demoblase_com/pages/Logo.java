@@ -44,7 +44,7 @@ public class Logo extends AbstractPage {
     }
 
     // Клик по главному логотипу сайта с ложным локатором.
-    public void clickWrongLogo () throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public void clickWrongLogo() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         clickElement(wrongLogo, wrongLogoLocator);
     }
 }

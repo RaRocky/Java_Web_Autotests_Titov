@@ -64,7 +64,7 @@ public class MainMenu extends AbstractPage {
     }
 
     // Клик по кнопке 'About us'.
-    public MainMenu clickAboutUs () throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public MainMenu clickAboutUs() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         clickElement(aboutUs, aboutUsLocator);
         return this;
     }

@@ -1,6 +1,5 @@
 package org.example.servises.abstractions;
 
-import io.qameta.allure.Step;
 import org.example.servises.Settings;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;

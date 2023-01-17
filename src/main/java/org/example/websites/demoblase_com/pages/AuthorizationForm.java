@@ -50,7 +50,7 @@ public class AuthorizationForm extends AbstractPage {
 
 
     // Метод, осуществляющий авторизацию пользователя.
-    public void logIn (String userName, String password)
+    public void logIn(String userName, String password)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         clickUserNameField()
                 .pause()

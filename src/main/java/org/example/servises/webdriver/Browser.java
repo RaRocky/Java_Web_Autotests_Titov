@@ -52,12 +52,12 @@ public class Browser {
     }
 
     // Переход на страницу сайта по ссылке.
-    public void goToUrl (String url) {
+    public void goToUrl(String url) {
         webDriver.navigate().to(url);
     }
 
     // Закрыть браузер. Завершить работу Web Driver.
-    public void close () {
+    public void close() {
         webDriver.quit();
     }
 }

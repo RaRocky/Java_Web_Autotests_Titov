@@ -28,7 +28,7 @@ public class ProductPage extends AbstractPage {
 
 
     // Клик по кнопке 'Add to cart'.
-    public ProductPage clickAddToCartButton ()
+    public ProductPage clickAddToCartButton()
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         clickElement(addToCartButton, addToCartLocator);
         return this;

@@ -91,8 +91,8 @@ public class DemoblaseTest extends AbstractTest {
         getBrowser().goToUrl("https://www.demoblaze.com/prod.html?idp_=5");
         Logo logo = new Logo(getBrowser());
 
-            Assertions.assertThrows(WrongPathOfLocatorException.class,
-                    logo::clickWrongLogo);
+        Assertions.assertThrows(WrongPathOfLocatorException.class,
+                logo::clickWrongLogo);
     }
 
     @Test
@@ -108,11 +108,6 @@ public class DemoblaseTest extends AbstractTest {
 
         sendContactMessageTestCase.doTestCase();
     }
-
-   /* @Step("Демо шаг")
-    public void demoStep () {
-        System.out.println("Демо шаг.");
-    }*/
 }
 
 

@@ -1,20 +1,17 @@
 package org.example.demo;
 
-import org.example.demo.DemoApp;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
  * Unit test for simple App.
  */
-public class DemoAppTest
-{
+public class DemoAppTest {
     /**
      * Rigorous Test :-)
      */
     @Test
-    public void demoTest()
-    {
+    public void demoTest() {
         DemoApp.demo();
         Assertions.assertTrue(true);
     }

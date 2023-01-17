@@ -90,7 +90,7 @@ public class AuthorizationTestCase extends AbstractTestCase {
     // Проверка выполнения шага №2.
     @Override
     public AbstractTestCase checkOfStep2() {
-            assertOfWebElementText(TypeOfLocator.ID, "nameofuser", "Welcome Bob Smith");
+        assertOfWebElementText(TypeOfLocator.ID, "nameofuser", "Welcome Bob Smith");
         return super.checkOfStep2();
     }
 }

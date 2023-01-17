@@ -1,7 +1,5 @@
 package org.example.servises.webdriver;
 
-import org.openqa.selenium.WebElement;
-
 // Класс описывает основные характеристики веб-элемента, необходимые для взаимодействия с ним.
 public class Locator {
 

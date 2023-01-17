@@ -1,6 +1,5 @@
 package org.example.websites.demoblase_com.testcases;
 
-import io.qameta.allure.Step;
 import org.example.servises.abstractions.AbstractTestCase;
 import org.example.servises.exceptions.WrongPathOfLocatorException;
 import org.example.servises.exceptions.WrongTypeOfLocatorException;

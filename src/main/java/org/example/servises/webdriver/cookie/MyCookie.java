@@ -63,11 +63,11 @@ public class MyCookie {
             while ((reader = bufferedReader.readLine()) != null) {
                 String[] values = reader.split(";");    // Массив строковых значений, разделенных ";".
                 String name = values[0];        // имя cookie-файла.
-                String value  = values[1];      // значение cookie.
-                String domain = values [2];     // домен, имеющий доступ к cookie.
+                String value = values[1];      // значение cookie.
+                String domain = values[2];     // домен, имеющий доступ к cookie.
                 String path = values[3];        // путь к директории на сервере, для которой будут доступны cookie.
                 String isSecureStr = values[4]; // параметр указывает браузеру, что cookie должны
-                                                // передаваться на сервер только по защищённому https-соединению.
+                // передаваться на сервер только по защищённому https-соединению.
 
                 boolean isSecure;
                 isSecure = isSecureStr.equals("true");  // Приведение из строкового значения в boolean.

@@ -59,7 +59,7 @@ public class ContactForm extends AbstractPage {
 
 
     // Метод, осуществляющий отправку сообщения в разделе 'Contact'.
-    public void sendContactMessage (String email, String name, String message)
+    public void sendContactMessage(String email, String name, String message)
             throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         clickContactEmailField()
                 .pause()
@@ -116,7 +116,7 @@ public class ContactForm extends AbstractPage {
     }
 
     // Клик по кнопке 'Send message'.
-    public ContactForm clickSendMessageButton () throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
+    public ContactForm clickSendMessageButton() throws WrongTypeOfLocatorException, WrongPathOfLocatorException {
         clickElement(sendMessageButton, sendMessageButtonLocator);
         return this;
     }

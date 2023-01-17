@@ -18,6 +18,7 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 
+// Класс, содержащий тесты функции нахождения площади треугольника по трем сторонам.
 public class TriangleTest extends AbstractTest {
 
     private final Logger logger = LoggerFactory.getLogger(TriangleTest.class);
